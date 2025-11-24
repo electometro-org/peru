@@ -23,7 +23,7 @@ function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Empezar Ahora
+            Empezar
           </a>
           <a
             href="#caracteristicas"
