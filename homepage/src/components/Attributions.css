@@ -1,0 +1,132 @@
+.attributions {
+  padding: 6rem 2rem;
+  background: var(--light-bg);
+}
+
+.attributions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.attributions-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.attributions-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.attributions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.attribution-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(217, 16, 35, 0.1);
+  transition: all 0.3s ease;
+}
+
+.attribution-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(217, 16, 35, 0.3);
+  box-shadow: 0 8px 20px rgba(217, 16, 35, 0.1);
+}
+
+.attribution-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.attribution-full-name {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.attribution-author {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.attribution-license {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.attribution-license a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.attribution-license a:hover {
+  text-decoration: underline;
+}
+
+.attribution-source {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.attribution-source a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.attribution-source a:hover {
+  text-decoration: underline;
+}
+
+.attribution-note {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(217, 16, 35, 0.1);
+}
+
+.attributions-footer {
+  background: var(--lighter-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.attributions-footer p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .attributions {
+    padding: 4rem 1rem;
+  }
+
+  .attributions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

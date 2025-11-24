@@ -1,0 +1,86 @@
+.party-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  background: linear-gradient(90deg,
+    rgb(234, 223, 223) 0%,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0) 90%,
+    rgb(234, 223, 223) 100% )
+}
+
+.carousel-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.party-logo-wrapper {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(217, 16, 35, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(217, 16, 35, 0.1);
+}
+
+.party-logo-wrapper:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(217, 16, 35, 0.2);
+  border-color: rgba(217, 16, 35, 0.3);
+  animation-play-state: paused;
+}
+
+.party-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.party-logo-wrapper:hover .party-logo {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover over the carousel */
+.party-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .party-logo-wrapper {
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+
+  .carousel-track {
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: scroll 80s linear infinite;
+  }
+}
