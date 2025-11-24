@@ -168,10 +168,6 @@
     padding: 0 1rem;
   }
 
-  .hero-title {
-    margin-top: 5rem;
-  }
-
   .hero-logo {
     width: clamp(10px, 30vw, 120px);
     margin-bottom: 1.5rem;
