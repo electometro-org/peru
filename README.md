@@ -1,2 +1,2 @@
-# pe
+# Peru
 Stack for decide.pe
