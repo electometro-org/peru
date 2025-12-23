@@ -6,6 +6,9 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         {/*<img src="/reverseLogo.svg" alt="Electómetro" className="hero-logo" />*/}
+        <div className="hero-badge">
+          <span>🗳️ Elecciones 2026</span>
+        </div>
         <h1 className="hero-title">
           Descubre
           <br />
@@ -31,9 +34,6 @@ function Hero() {
           >
             Conocer Más
           </a>
-        </div>
-        <div className="hero-badge">
-          <span>🗳️ Elecciones 2026</span>
         </div>
         <div className="hero-stats">
           <div className="stat">

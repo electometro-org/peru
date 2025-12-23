@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  padding-top: 5rem;
+  /*padding-top: 5rem;*/
   background: linear-gradient(360deg, #fff 0%, #dfcfcf 100%);
   position: relative;
   overflow: hidden;
@@ -61,7 +61,7 @@
   border: 1px solid rgba(217, 16, 35, 0.3);
   border-radius: 50px;
   margin-bottom: 2rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #53222C;
 }
