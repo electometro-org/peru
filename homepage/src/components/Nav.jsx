@@ -38,17 +38,17 @@ function Nav() {
               Cómo Funciona
             </a>
           </li>
-          {/*<li className="nav-item">*/}
-          {/*  <a*/}
-          {/*    href="https://demo.decide.pe"*/}
-          {/*    className="nav-link nav-cta"*/}
-          {/*    target="_blank"*/}
-          {/*    rel="noopener noreferrer"*/}
-          {/*    onClick={() => setIsMenuOpen(false)}*/}
-          {/*  >*/}
-          {/*    Empezar Test*/}
-          {/*  </a>*/}
-          {/*</li>*/}
+          <li className="nav-item">
+            <a
+              href="https://demo.decide.pe"
+              className="nav-link nav-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Empezar
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

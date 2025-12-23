@@ -27,6 +27,7 @@
   font-weight: 700;
   color: var(--text-dark);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-logo img {
