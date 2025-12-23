@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Nav.css'
 
 function Nav() {
@@ -11,10 +12,10 @@ function Nav() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-logo">
+        <Link to="/" className="nav-logo">
           <img src="/reverseLogo.svg" alt="Electómetro" />
           <span>Electómetro</span>
-        </div>
+        </Link>
 
         <button
           className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
@@ -28,12 +29,12 @@ function Nav() {
 
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="#caracteristicas" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#caracteristicas" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               Características
             </a>
           </li>
           <li className="nav-item">
-            <a href="#como-funciona" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#como-funciona" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               Cómo Funciona
             </a>
           </li>
