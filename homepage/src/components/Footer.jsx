@@ -26,11 +26,10 @@ function Footer() {
           <div className="footer-section">
             <h4 className="footer-heading">Información</h4>
             <ul className="footer-links">
-              <li><a href="#atribuciones">Atribuciones</a></li>
-              <li><a href="#privacidad">Política de Privacidad</a></li>
-              <li><a href="#metodologia">Metodología</a></li>
-              <li><a href="#contacto">Contacto</a></li>
               <li><Link to="/atribuciones">Atribuciones</Link></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/politica-privacidad">Política de Privacidad</a></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/metodologia">Metodología</a></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/contacto">Contacto</a></li>
             </ul>
           </div>
         </div>
