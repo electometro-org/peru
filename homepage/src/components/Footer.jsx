@@ -30,6 +30,7 @@ function Footer() {
               <li><a href="#privacidad">Política de Privacidad</a></li>
               <li><a href="#metodologia">Metodología</a></li>
               <li><a href="#contacto">Contacto</a></li>
+              <li><Link to="/atribuciones">Atribuciones</Link></li>
             </ul>
           </div>
         </div>

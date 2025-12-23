@@ -1,22 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import Features from './components/Features.jsx'
-import HowItWorks from './components/HowItWorks.jsx'
-import Attributions from './components/Attributions.jsx'
+import Home from './pages/Home.jsx'
+import AttributionsPage from './pages/AttributionsPage.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Attributions />
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/atribuciones" element={<AttributionsPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
