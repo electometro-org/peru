@@ -1,0 +1,66 @@
+name: Deploy App to CF Worker
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Checkout peru (this repo)
+        uses: actions/checkout@v4
+
+      - name: Clone electometro-app
+        uses: actions/checkout@v4
+        with:
+          repository: electometro-org/app
+          path: electometro
+          token: '${{ secrets.GH_ORG_TOKEN }}'
+
+      - name: Clone cf-workers
+        uses: actions/checkout@v4
+        with:
+          repository: electometro-org/cf-workers
+          path: cf-workers
+          token: '${{ secrets.GH_ORG_TOKEN }}'
+
+      - name: Setup app directories
+        env:
+          QA_ENV_FILE: ${{ secrets.QA_ENV_FILE }}
+        run: |
+          cd electometro
+
+          # Remove existing symlinks
+          rm -f public wrangler
+
+          # Copy public assets from peru repo
+          cp -r ../app/public ./public
+
+          # Copy wrangler config from cf-workers
+          cp -r ../cf-workers/peru_2026/wrangler ./wrangler
+          
+          # Parse env file
+          echo $QA_ENV_FILE | base64 --decode > .env
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: electometro/package-lock.json
+
+      - name: Install dependencies
+        working-directory: electometro
+        run: npm ci
+
+      - name: Build
+        working-directory: electometro
+        run: VITE_ELECTION_ID=peru_2026 npm run build
+
+      - name: Deploy to Cloudflare Workers
+        working-directory: electometro
+        run: CLOUDFLARE_ACCOUNT_ID=${{ secrets.CLOUDFLARE_ACCOUNT_ID }} CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }} VITE_ELECTION_ID=peru_2026 npm run deploy
