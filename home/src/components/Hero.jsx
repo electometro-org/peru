@@ -7,7 +7,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <div className="hero-badge">
-          <span><T keyName="hero.badge">Elecciones 2026</T></span>
+          <span>🗳️ <T keyName="hero.badge">Elecciones 2026</T></span>
         </div>
         <h1 className="hero-title">
           <T keyName="hero.title.discover">Descubre</T>
