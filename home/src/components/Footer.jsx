@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
+import { T } from "@tolgee/react"
 import './Footer.css'
 
 function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -11,34 +10,34 @@ function Footer() {
           <div className="footer-section">
             <h3 className="footer-title">Electómetro</h3>
             <p className="footer-description">
-              Herramienta imparcial para descubrir qué partido político
-              representa mejor tus ideas y valores.
+              <T keyName="footer.description">Herramienta imparcial para descubrir qué partido político representa mejor tus ideas y valores.</T>
             </p>
           </div>
           <div className="footer-section">
-            <h4 className="footer-heading">Acerca de</h4>
+            <h4 className="footer-heading">
+              <T keyName="footer.about.title">Acerca de</T>
+            </h4>
             <ul className="footer-links">
-              <li><a href="/#caracteristicas">Características</a></li>
-              <li><a href="/#como-funciona">Cómo Funciona</a></li>
-              <li><a href="https://demo.decide.pe" target="_blank" rel="noopener noreferrer">Empezar Test</a></li>
+              <li><a href="/#caracteristicas"><T keyName="footer.about.features">Características</T></a></li>
+              <li><a href="/#como-funciona"><T keyName="footer.about.howItWorks">Cómo Funciona</T></a></li>
+              <li><a href="https://demo.decide.pe" target="_blank" rel="noopener noreferrer"><T keyName="footer.about.startTest">Empezar Test</T></a></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h4 className="footer-heading">Información</h4>
+            <h4 className="footer-heading">
+              <T keyName="footer.info.title">Información</T>
+            </h4>
             <ul className="footer-links">
-              <li><Link to="/atribuciones">Atribuciones</Link></li>
-              <li><a target="_blank" href="https://demo.decide.pe/#/politica-privacidad">Política de Privacidad</a></li>
-              <li><a target="_blank" href="https://demo.decide.pe/#/metodologia">Metodología</a></li>
-              <li><a target="_blank" href="https://demo.decide.pe/#/contacto">Contacto</a></li>
+              <li><Link to="/atribuciones"><T keyName="footer.info.attributions">Atribuciones</T></Link></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/politica-privacidad"><T keyName="footer.info.privacy">Política de Privacidad</T></a></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/metodologia"><T keyName="footer.info.methodology">Metodología</T></a></li>
+              <li><a target="_blank" href="https://demo.decide.pe/#/contacto"><T keyName="footer.info.contact">Contacto</T></a></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          {/*<p className="footer-copyright">*/}
-          {/*  © {currentYear} Electómetro. Todos los derechos reservados.*/}
-          {/*</p>*/}
           <p className="footer-disclaimer">
-            Herramienta informativa. No constituye consejo electoral oficial.
+            <T keyName="footer.disclaimer">Herramienta informativa. No constituye consejo electoral oficial.</T>
           </p>
         </div>
       </div>
