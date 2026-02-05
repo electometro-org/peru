@@ -1,26 +1,35 @@
+import { T } from "@tolgee/react"
 import './HowItWorks.css'
 
 function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Responde las Preguntas',
-      description: 'Contesta un cuestionario sobre temas políticos importantes. Puedes saltar preguntas si no estás seguro.'
+      titleKey: 'howItWorks.step1.title',
+      titleDefault: 'Responde las Preguntas',
+      descKey: 'howItWorks.step1.description',
+      descDefault: 'Contesta un cuestionario sobre temas políticos importantes. Puedes saltar preguntas si no estás seguro.'
     },
     {
       number: '02',
-      title: 'Analiza tu Perfil',
-      description: 'Nuestro algoritmo compara tus respuestas con las posiciones de todos los partidos políticos.'
+      titleKey: 'howItWorks.step2.title',
+      titleDefault: 'Analiza tu Perfil',
+      descKey: 'howItWorks.step2.description',
+      descDefault: 'Nuestro algoritmo compara tus respuestas con las posiciones de todos los partidos políticos.'
     },
     {
       number: '03',
-      title: 'Descubre tu Compatibilidad',
-      description: 'Visualiza qué partidos se alinean mejor con tus ideas y conoce las diferencias clave.'
+      titleKey: 'howItWorks.step3.title',
+      titleDefault: 'Descubre tu Compatibilidad',
+      descKey: 'howItWorks.step3.description',
+      descDefault: 'Visualiza qué partidos se alinean mejor con tus ideas y conoce las diferencias clave.'
     },
     {
       number: '04',
-      title: 'Decide Informado',
-      description: 'Usa esta información como guía para tomar una decisión electoral más consciente y fundamentada.'
+      titleKey: 'howItWorks.step4.title',
+      titleDefault: 'Decide Informado',
+      descKey: 'howItWorks.step4.description',
+      descDefault: 'Usa esta información como guía para tomar una decisión electoral más consciente y fundamentada.'
     }
   ]
 
@@ -28,9 +37,11 @@ function HowItWorks() {
     <section className="how-it-works" id="como-funciona">
       <div className="how-it-works-container">
         <div className="how-it-works-header">
-          <h2 className="section-title">¿Cómo Funciona?</h2>
+          <h2 className="section-title">
+            <T keyName="howItWorks.title">¿Cómo Funciona?</T>
+          </h2>
           <p className="section-description">
-            En solo 4 pasos simples, encuentra el partido que mejor representa tus valores
+            <T keyName="howItWorks.subtitle">En solo 4 pasos simples, encuentra el partido que mejor representa tus valores</T>
           </p>
         </div>
         <div className="steps-container">
@@ -38,8 +49,12 @@ function HowItWorks() {
             <div key={index} className="step">
               <div className="step-number">{step.number}</div>
               <div className="step-content">
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
+                <h3 className="step-title">
+                  <T keyName={step.titleKey}>{step.titleDefault}</T>
+                </h3>
+                <p className="step-description">
+                  <T keyName={step.descKey}>{step.descDefault}</T>
+                </p>
               </div>
               {index < steps.length - 1 && (
                 <div className="step-connector"></div>
@@ -48,9 +63,11 @@ function HowItWorks() {
           ))}
         </div>
         <div className="cta-section">
-          <h3 className="cta-title">¿Listo para empezar?</h3>
+          <h3 className="cta-title">
+            <T keyName="howItWorks.cta.title">¿Listo para empezar?</T>
+          </h3>
           <p className="cta-description">
-            Descubre en minutos qué partido político representa mejor tus ideas
+            <T keyName="howItWorks.cta.description">Descubre en minutos qué partido político representa mejor tus ideas</T>
           </p>
           <a
             href="https://demo.decide.pe"
@@ -58,7 +75,7 @@ function HowItWorks() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Comenzar Ahora
+            <T keyName="howItWorks.cta.button">Comenzar Ahora</T>
           </a>
         </div>
       </div>

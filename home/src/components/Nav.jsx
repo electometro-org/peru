@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { T } from "@tolgee/react"
 import './Nav.css'
 
 function Nav() {
@@ -30,12 +31,12 @@ function Nav() {
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <a href="/#caracteristicas" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Características
+              <T keyName="nav.features">Características</T>
             </a>
           </li>
           <li className="nav-item">
             <a href="/#como-funciona" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-              Cómo Funciona
+              <T keyName="nav.howItWorks">Cómo Funciona</T>
             </a>
           </li>
           <li className="nav-item">
@@ -46,7 +47,7 @@ function Nav() {
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
             >
-              Empezar
+              <T keyName="nav.start">Empezar</T>
             </a>
           </li>
         </ul>

@@ -1,6 +1,9 @@
+import { T, useTranslate } from "@tolgee/react"
 import './Attributions.css'
 
 function Attributions() {
+  const { t } = useTranslate()
+
   const logos = [
     {
       name: 'PRIN',
@@ -85,10 +88,11 @@ function Attributions() {
   return (
     <section className="attributions" id="atribuciones">
       <div className="attributions-container">
-        <h2 className="attributions-title">Atribuciones</h2>
+        <h2 className="attributions-title">
+          <T keyName="attributions.title">Atribuciones</T>
+        </h2>
         <p className="attributions-intro">
-          Los logos de los partidos políticos mostrados en este sitio web provienen de Wikimedia Commons
-          y están sujetos a las siguientes licencias:
+          <T keyName="attributions.intro">Los logos de los partidos políticos mostrados en este sitio web provienen de Wikimedia Commons y están sujetos a las siguientes licencias:</T>
         </p>
 
         <div className="attributions-grid">
@@ -98,15 +102,15 @@ function Attributions() {
               <p className="attribution-full-name">{logo.fullName}</p>
 
               {logo.author && (
-                <p className="attribution-author">Autor: {logo.author}</p>
+                <p className="attribution-author">{t('attributions.author', 'Autor')}: {logo.author}</p>
               )}
 
               <div className="attribution-license">
                 {logo.license === 'Public Domain' ? (
-                  <span>Dominio Público</span>
+                  <span><T keyName="attributions.publicDomain">Dominio Público</T></span>
                 ) : (
                   <>
-                    Licencia: <a href={logo.licenseUrl} target="_blank" rel="noopener noreferrer">
+                    {t('attributions.license', 'Licencia')}: <a href={logo.licenseUrl} target="_blank" rel="noopener noreferrer">
                       {logo.license}
                     </a>
                   </>
@@ -114,7 +118,7 @@ function Attributions() {
               </div>
 
               <p className="attribution-source">
-                Fuente: <a href={logo.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {t('attributions.source', 'Fuente')}: <a href={logo.sourceUrl} target="_blank" rel="noopener noreferrer">
                   {logo.source}
                 </a>
               </p>
@@ -128,9 +132,7 @@ function Attributions() {
 
         <div className="attributions-footer">
           <p>
-            Todos los logos son propiedad de sus respectivos partidos políticos.
-            El uso de estos logos en este sitio es exclusivamente con fines informativos
-            y educativos, conforme a las licencias bajo las cuales fueron publicados.
+            <T keyName="attributions.footer">Todos los logos son propiedad de sus respectivos partidos políticos. El uso de estos logos en este sitio es exclusivamente con fines informativos y educativos, conforme a las licencias bajo las cuales fueron publicados.</T>
           </p>
         </div>
       </div>
