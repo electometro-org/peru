@@ -18,7 +18,7 @@ function Hero() {
         </h1>
         <div className="hero-cta">
           <a
-            href="{import.meta.env.VITE_ELECTOMETRO_URL}"
+            href={import.meta.env.VITE_ELECTOMETRO_URL}
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
