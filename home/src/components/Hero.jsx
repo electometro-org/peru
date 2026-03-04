@@ -20,8 +20,6 @@ function Hero() {
           <a
             href={import.meta.env.VITE_ELECTOMETRO_URL}
             className="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <T keyName="hero.cta.start">Empezar</T>
           </a>

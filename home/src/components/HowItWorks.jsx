@@ -72,8 +72,6 @@ function HowItWorks() {
           <a
             href={import.meta.env.VITE_ELECTOMETRO_URL}
             className="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <T keyName="howItWorks.cta.button">Comenzar Ahora</T>
           </a>

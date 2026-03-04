@@ -43,8 +43,6 @@ function Nav() {
             <a
               href={import.meta.env.VITE_ELECTOMETRO_URL}
               className="nav-link nav-cta"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
             >
               <T keyName="nav.start">Empezar</T>
