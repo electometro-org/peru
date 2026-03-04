@@ -1,0 +1,103 @@
+{
+  "attributions": {
+    "author": "Autor",
+    "footer": "Todos los logos son propiedad de sus respectivos partidos políticos. El uso de estos logos en este sitio es exclusivamente con fines informativos y educativos, conforme a las licencias bajo las cuales fueron publicados.",
+    "intro": "Los logos de los partidos políticos mostrados en este sitio web provienen de Wikimedia Commons y están sujetos a las siguientes licencias:",
+    "license": "Licencia",
+    "publicDomain": "Dominio Público",
+    "source": "Fuente",
+    "title": "Atribuciones"
+  },
+  "features": {
+    "accessible": {
+      "description": "Funciona perfectamente en computadora, tablet o móvil. Usa cuando quieras, donde quieras.",
+      "title": "Accesible en Cualquier Dispositivo"
+    },
+    "fast": {
+      "description": "Completa el cuestionario en menos de 10 minutos y obtén resultados instantáneos.",
+      "title": "Rápido y Fácil"
+    },
+    "matching": {
+      "description": "Algoritmo que compara tus respuestas con las posiciones reales de los partidos políticos.",
+      "title": "Precisión en el Matching"
+    },
+    "objective": {
+      "description": "Metodología transparente basada en propuestas y posiciones públicas de los partidos.",
+      "title": "Objetivo"
+    },
+    "privacy": {
+      "description": "Tus respuestas no pueden ser usadas para identificarte.",
+      "title": "Privacidad Garantizada"
+    },
+    "results": {
+      "description": "Visualiza tu afinidad con cada partido y compara tus respuestas con sus posiciones.",
+      "title": "Resultados Detallados"
+    },
+    "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas",
+    "title": "¿Por qué usar el Electómetro?"
+  },
+  "footer": {
+    "about": {
+      "features": "Características",
+      "howItWorks": "Cómo Funciona",
+      "startTest": "Empezar Test",
+      "title": "Acerca de"
+    },
+    "description": "Herramienta imparcial para descubrir qué partido político representa mejor tus ideas y valores.",
+    "disclaimer": "Herramienta informativa. No constituye consejo electoral oficial.",
+    "info": {
+      "attributions": "Atribuciones",
+      "contact": "Contacto",
+      "methodology": "Metodología",
+      "privacy": "Política de Privacidad",
+      "title": "Información"
+    }
+  },
+  "hero": {
+    "badge": "Elecciones 2026",
+    "cta": {
+      "learnMore": "Conocer Más",
+      "start": "Empezar"
+    },
+    "stats": {
+      "candidates": "Candidatos",
+      "necessary": "Necesario",
+      "questions": "Preguntas"
+    },
+    "title": {
+      "discover": "Descubre",
+      "represents": "te representa",
+      "who": "quién"
+    }
+  },
+  "howItWorks": {
+    "cta": {
+      "button": "Comenzar Ahora",
+      "description": "Descubre en minutos qué partido político representa mejor tus ideas",
+      "title": "¿Listo para empezar?"
+    },
+    "step1": {
+      "description": "Contesta un cuestionario sobre temas políticos importantes. Puedes saltar preguntas si no estás seguro.",
+      "title": "Responde las Preguntas"
+    },
+    "step2": {
+      "description": "Nuestro algoritmo compara tus respuestas con las posiciones de todos los partidos políticos.",
+      "title": "Analiza tu Perfil"
+    },
+    "step3": {
+      "description": "Visualiza qué partidos se alinean mejor con tus ideas y conoce las diferencias clave.",
+      "title": "Descubre tu Compatibilidad"
+    },
+    "step4": {
+      "description": "Usa esta información como guía para tomar una decisión electoral más consciente y fundamentada.",
+      "title": "Decide Informado"
+    },
+    "subtitle": "En solo 4 pasos simples, encuentra el partido que mejor representa tus valores",
+    "title": "¿Cómo Funciona?"
+  },
+  "nav": {
+    "features": "Características",
+    "howItWorks": "Cómo Funciona",
+    "start": "Empezar"
+  }
+}
