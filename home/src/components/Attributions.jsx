@@ -14,38 +14,28 @@ function Attributions() {
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Partido_Pol%C3%ADtico_PRIN_-_S%C3%ADmbolo.png'
     },
     {
-      name: 'FREPAP',
-      fullName: 'Frente Popular Agrícola del Perú',
-      license: 'Public Domain',
-      licenseUrl: null,
-      source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_of_the_Agricultural_People%27s_Front_of_Peru.png'
-    },
-    {
       name: 'Somos Perú',
       fullName: 'Partido Político Somos Perú',
       license: 'CC BY-SA 4.0',
       licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_Partido_Democr%C3%A1tico_Somos_Per%C3%BA.png'
+      source: 'Wikipedia',
+      sourceUrl: 'https://de.wikipedia.org/wiki/Somos_Per%C3%BA#/media/Datei:Logo_Partido_Democr%C3%A1tico_Somos_Per%C3%BA.svg'
     },
     {
       name: 'Partido Morado',
       fullName: 'Partido Morado',
-      license: 'CC0',
-      licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
-      source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_Partido_Morado.png',
-      author: 'Rodolfo Pérez Osores, Secretario General'
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Facebook',
+      sourceUrl: 'https://www.facebook.com/photo.php?fbid=2142292532557974&set=a.1177281969059040&id=100064561037326'
     },
     {
       name: 'Avanza País',
       fullName: 'Avanza País',
-      license: 'CC BY-SA 4.0',
-      licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      license: 'Public Domain',
+      licenseUrl: null,
       source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Avanza_Pa%C3%ADs_Logo_2017-20.jpg',
-      note: 'Published by the National Jury of Elections (Peru)'
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Go_on_Country_2022.jpg'
     },
     {
       name: 'Fuerza Popular',
@@ -53,35 +43,119 @@ function Attributions() {
       license: 'Public Domain',
       licenseUrl: null,
       source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Fuerza_popular.jpg',
-      author: 'OliverHoc'
-    },
-    {
-      name: 'Acción Popular',
-      fullName: 'Acción Popular',
-      license: 'CC0',
-      licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
-      source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Acci%C3%B3n_Popular.png',
-      author: 'Oficina Nacional de Procesos Electorales / Miguel Cruchaga Belaúnde'
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_of_the_Popular_Force_(2024).svg'
     },
     {
       name: 'Ahora Nación',
       fullName: 'Ahora Nación',
       license: 'Public Domain',
       licenseUrl: null,
-      source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ahora_Naci%C3%B3n.jpg',
-      author: 'Alfonso López Chau Nava'
+      source: 'Wikipedia',
+      sourceUrl: 'https://en.wikipedia.org/wiki/File:Logo_of_the_Ahora_Naci%C3%B3n.png'
     },
     {
       name: 'Juntos por el Perú',
       fullName: 'Juntos por el Perú',
       license: 'CC BY-SA 4.0',
       licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Juntos_por_el_Per%C3%BA#/media/Archivo:Logo_juntos_por_el_Peru.svg'
+    },
+    {
+      name: 'Renovación Popular',
+      fullName: 'Renovación Popular',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Archivo:Renovaci%C3%B3n_Popular_logo.svg'
+    },
+    {
+      name: 'Alianza para el Progreso',
+      fullName: 'Alianza para el Progreso',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Archivo:Alianza_para_el_Progreso_Peru.svg'
+    },
+    {
+      name: 'APRA',
+      fullName: 'Alianza Popular Revolucionaria Americana',
+      license: 'Public Domain',
+      licenseUrl: null,
       source: 'Wikimedia Commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_juntos_por_el_Peru.svg',
-      author: 'Txolo'
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:APRA_Peru_logo.svg'
+    },
+    {
+      name: 'Perú Libre',
+      fullName: 'Partido Político Nacional Perú Libre',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Perú Libre',
+      sourceUrl: 'http://perulibre.pe/wp-content/uploads/2021/11/lapiz-pl.png'
+    },
+    {
+      name: 'Podemos Perú',
+      fullName: 'Podemos Perú',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Podemos_Per%C3%BA#/media/Archivo:Logo_Podemos_Per%C3%BA.png'
+    },
+    {
+      name: 'Fe en el Perú',
+      fullName: 'Fe en el Perú',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Archivo:Fe_en_el_Per%C3%BA_%28logo%29.svg'
+    },
+    {
+      name: 'Perú Primero',
+      fullName: 'Perú Primero',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikimedia Commons',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Logo_de_Per%C3%BA_Primero.png'
+    },
+    {
+      name: 'Partido Cívico OBRAS',
+      fullName: 'Partido Cívico OBRAS',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikimedia Commons',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Partido_Civico_OBRAS.png'
+    },
+    {
+      name: 'Primero La Gente',
+      fullName: 'Primero La Gente',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Primero_la_Gente_(Per%C3%BA)#/media/Archivo:Primero_La_Gente_2022.jpg'
+    },
+    {
+      name: 'Libertad Popular',
+      fullName: 'Libertad Popular',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'X (Twitter)',
+      sourceUrl: 'https://x.com/PCaterianoB/status/1608283596694949889'
+    },
+    {
+      name: 'Partido Patriótico del Perú',
+      fullName: 'Partido Patriótico del Perú',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Archivo:Partido_Patri%C3%B3tico_del_Per%C3%BA_%28logo%29.svg'
+    },
+    {
+      name: 'PTE Perú',
+      fullName: 'Partido Tecnológico del Perú',
+      license: 'Public Domain',
+      licenseUrl: null,
+      source: 'Wikipedia',
+      sourceUrl: 'https://es.wikipedia.org/wiki/Archivo:Logo_PTE_PERU.jpg'
     }
   ]
 
