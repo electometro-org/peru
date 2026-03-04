@@ -86,9 +86,11 @@ jobs:
           CLOUDFLARE_ENV: ${{ inputs.environment == 'qa' && 'qa' || '' }}
         run: |
           # Wrangler refuses to parse vars from env. We pass them explicitly
-          evvars=CLOUDFLARE_ACCOUNT_ID=${{ secrets.CLOUDFLARE_ACCOUNT_ID }} CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }} CLOUDFLARE_ENV=$CLOUDFLARE_ENV
+          export CLOUDFLARE_ACCOUNT_ID=${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          export CLOUDFLARE_API_TOKEN=${{ secrets.CLOUDFLARE_API_TOKEN }}
+          export CLOUDFLARE_ENV=$CLOUDFLARE_ENV
           if [ "${{ inputs.environment }}" = "qa" ]; then
-            $evvars npm run deploy
+            npm run deploy > /dev/null 2>&1
           else
-            $evvars npm run deploy
+            npm run deploy
           fi
