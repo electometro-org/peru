@@ -1,0 +1,13 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; connect-src 'self' https://*.decide.pe; img-src 'self' data: https://upload.wikimedia.org; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src 'none';
+
+# Production
+https://decide.pe/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self'; connect-src 'self' https://data.decide.pe; img-src 'self' data: https://upload.wikimedia.org; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src 'none';
+
+# QA (Replace with QA domain)
+https://placeholder.com/*
+  ! Content-Security-Policy
+  X-Robots-Tag: noindex
+  Content-Security-Policy: default-src 'self'; script-src 'self'; connect-src 'self' https://i18n.decide.pe https://data.decide.pe https://placeholder.com; img-src 'self' data: https://upload.wikimedia.org; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src 'none';
