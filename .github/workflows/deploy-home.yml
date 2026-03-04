@@ -38,7 +38,7 @@ jobs:
           HOMEPAGE_ENV_FILE: ${{ secrets.HOMEPAGE_ENV_FILE }}
         working-directory: home
         run: |
-          echo HOMEPAGE_ENV_FILE | base64 --decode > .env
+          echo $HOMEPAGE_ENV_FILE | base64 --decode > .env
 
       - name: Replace QA placeholder in _headers and wrangler.toml
         if: inputs.environment == 'qa'
