@@ -153,6 +153,7 @@
 
   .nav-menu.active {
     transform: translateX(0);
+    touch-action: none;
   }
 
   .nav-item {
