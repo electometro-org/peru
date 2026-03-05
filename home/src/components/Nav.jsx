@@ -41,6 +41,15 @@ function Nav() {
           </li>
           <li className="nav-item">
             <a
+              href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/metodologia`}
+              className="nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <T keyName="nav.methodology">Metodología</T>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
               href={import.meta.env.VITE_ELECTOMETRO_URL}
               className="nav-link nav-cta"
               onClick={() => setIsMenuOpen(false)}
