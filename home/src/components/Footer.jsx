@@ -29,9 +29,9 @@ function Footer() {
             </h4>
             <ul className="footer-links">
               <li><Link to="/atribuciones"><T keyName="footer.info.attributions">Atribuciones</T></Link></li>
-              <li><a target="_blank" href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/politica-privacidad`}><T keyName="footer.info.privacy">Política de Privacidad</T></a></li>
-              <li><a target="_blank" href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/metodologia`}><T keyName="footer.info.methodology">Metodología</T></a></li>
-              <li><a target="_blank" href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/contacto`}><T keyName="footer.info.contact">Contacto</T></a></li>
+              <li><a href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/politica-privacidad`}><T keyName="footer.info.privacy">Política de Privacidad</T></a></li>
+              <li><a href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/metodologia`}><T keyName="footer.info.methodology">Metodología</T></a></li>
+              <li><a href={`${import.meta.env.VITE_ELECTOMETRO_URL}/#/contacto`}><T keyName="footer.info.contact">Contacto</T></a></li>
             </ul>
           </div>
         </div>
