@@ -42,6 +42,10 @@
   --text-gray: #2a4155;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--light-bg);
   color: var(--text-dark);

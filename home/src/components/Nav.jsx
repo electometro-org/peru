@@ -1,22 +1,33 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { T } from "@tolgee/react"
 import './Nav.css'
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })
+    if (location.hash) {
+      setTimeout(() => navigate('/', { replace: true }), 600)
+    } else {
+      navigate('/')
+    }
+  }
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
+        <a href="#hero" className="nav-logo" onClick={handleLogoClick}>
           <img src="/reverseLogo.svg" alt="Electómetro" />
           <span>Electómetro</span>
-        </Link>
+        </a>
 
         <button
           className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}

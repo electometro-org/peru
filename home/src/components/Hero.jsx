@@ -4,7 +4,7 @@ import PartyCarousel from './PartyCarousel.jsx'
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-content">
         <div className="hero-badge">
           <span>🗳️ <T keyName="hero.badge">Elecciones 2026</T></span>
