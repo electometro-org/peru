@@ -13,11 +13,11 @@ function Hero() {
           <span>🗳️ <T keyName="hero.badge">Elecciones 2026</T></span>
         </div>
         <h1 className="hero-title">
-          <T keyName="hero.title.discover">Descubre</T>
+          <span className="title-discover"><T keyName="hero.title.discover">Descubre</T></span>
           <br />
           <PartyCarousel />
-          <span className="gradient-text"><T keyName="hero.title.who">quién</T> </span>
-          <T keyName="hero.title.represents">te representa</T>
+          <span className="title-who"><T keyName="hero.title.who">quién</T></span>{' '}
+          <span className="title-represents"><T keyName="hero.title.represents">te representa</T></span>
         </h1>
         <div className="hero-cta">
           <a
