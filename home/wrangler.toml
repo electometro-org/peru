@@ -5,17 +5,27 @@
 # Deploy: wrangler deploy
 
 name = "decide-pe-home"
-compatibility_date = "2025-08-13"
+main = "worker/worker.ts"
+compatibility_date = "2025-10-30"
+compatibility_flags = ["nodejs_compat"]
 workers_dev = false
 preview_urls = false
 
 # SPA configuration for serving React app
 [assets]
-not_found_handling = "single-page-application"
 # directory = "./dist"
 # Not needed if using Vite plugin. See https://developers.cloudflare.com/workers/wrangler/configuration/#assets
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = [ "/" ]
+
+[env.qa.assets]
+not_found_handling = "single-page-application"
+# Comment out for local testing of worker
+run_worker_first = false
 
 [route]
+# Change pattern and zone_name randomly to preview locally (otherwise wrangler fails to load _headers)
 pattern = "decide.pe"
 zone_name = "decide.pe"
 custom_domain = true
@@ -24,3 +34,16 @@ custom_domain = true
 pattern = "placeholder.com"
 zone_name = "placeholder.com"
 custom_domain = true
+
+[vars]
+ENVIRONMENT = "production"
+
+[env.qa.vars]
+# For local testing of SEO worker
+ENVIRONMENT = "qa"
+
+[[services]]
+binding = "SEO_WORKER"
+service = "decide-pe-seo-worker"
+
+# YOU'LL NEED TO DEPLOY THE SEO-WORKER LOCALLY AND ADD env.qa.services IF YOU WANT TO TEST IT
