@@ -96,3 +96,18 @@
     padding-top: 1.5rem;
   }
 }
+
+/* Safari 12 / iOS 12 compatibility: flexbox gap fallback */
+@supports not (gap: 1rem) {
+  .footer-section > * + * {
+    margin-top: 1rem;
+  }
+
+  .footer-links > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .footer-bottom > * + * {
+    margin-top: 0.5rem;
+  }
+}

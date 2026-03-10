@@ -46,6 +46,8 @@
 }
 
 .hero-logo {
+  /* Fallback for older browsers that don't support clamp() */
+  width: 110px;
   width: clamp(100px, 25vw, 120px);
   height: auto;
   margin-bottom: 2rem;
@@ -70,6 +72,8 @@
 }
 
 .hero-title {
+  /* Fallback for older browsers that don't support clamp() */
+  font-size: 3.5rem;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -91,6 +95,8 @@
 }
 
 .hero-description {
+  /* Fallback for older browsers that don't support clamp() */
+  font-size: 1.1rem;
   font-size: clamp(0.95rem, 2.5vw, 1.3rem);
   color: var(--text-gray);
   margin: 1.5rem auto 3rem;
@@ -221,6 +227,8 @@
   }
 
   .hero-logo {
+    /* Fallback for older browsers that don't support clamp() */
+    width: 90px;
     width: clamp(10px, 30vw, 120px);
     margin-bottom: 1.5rem;
   }
@@ -243,5 +251,22 @@
 
   .stat-number {
     font-size: 2rem;
+  }
+}
+
+/* Safari 12 / iOS 12 compatibility: flexbox gap fallback */
+@supports not (gap: 1rem) {
+  .hero-cta > * + * {
+    margin-left: 1rem;
+  }
+
+  .hero-stats > * + * {
+    margin-left: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-stats > * + * {
+      margin-left: 2rem;
+    }
   }
 }

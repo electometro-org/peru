@@ -122,3 +122,16 @@
     font-size: 2rem;
   }
 }
+
+/* Safari 12 / iOS 12 compatibility: flexbox gap fallback */
+@supports not (gap: 1rem) {
+  .steps-container > * + * {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .steps-container > * + * {
+      margin-top: 1rem;
+    }
+  }
+}
