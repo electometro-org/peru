@@ -79,7 +79,9 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          FINGERPRINT_KEY: ${{ secrets.FINGERPRINT_KEY }}
         run: |
+          npx fpscanner build
           if [ "${{ inputs.environment }}" = "qa" ]; then
             VITE_ELECTION_ID=peru_2026 npm run deploy-qa > /dev/null 2>&1
           else
