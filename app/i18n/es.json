@@ -66,6 +66,14 @@
     "showResults": "Mostrar resultados",
     "title": "Información estadística (opcional)"
   },
+  "electionIntro": {
+    "restoreBody": "Si ya completaste el cuestionario y deseas ver tus resultados anteriores, abre el enlace que generaste con el botón 'Guardar' o ingresa tu código aquí:",
+    "restoreButton": "Ver mis resultados",
+    "restoreError": "Código inválido. Verifica e intenta de nuevo.",
+    "restorePlaceholder": "Ejemplo: anden-cordillera-guacamayo-....",
+    "restoreResultsButton": "Ver mis resultados",
+    "restoreTitle": "Ver mis resultados"
+  },
   "elections": {
     "chile_2025": "Chile: Elecciones generales 2025",
     "peru_2026": "Perú: Elecciones generales 2026"
@@ -1264,6 +1272,9 @@
     "comparisonInfoBody": "Se incluyeron [NrOfImportantTopics] tema(s) de mayor importancia. Esto influye la posición del resultado en el ranking.",
     "comparisonInfoClose": "Cerrar",
     "completeComparisons": "[nrOfComplete] resultados con muestra suficiente",
+    "copied": "¡Copiado!",
+    "copyMnemonic": "Copiar clave",
+    "copyUrl": "Copiar enlace",
     "detailedMode": "Amplio",
     "expandSectionCta": "Presiona aquí para expandir",
     "fullMatchesHeading": "Coincides plenamente en [[nrOfMatchedTopics]] temas",
@@ -1278,8 +1289,14 @@
     "partialMatchesHeading": "Coincides parcialmente en [[nrOfMatchedTopics]] temas ",
     "parties": "Partidos políticos",
     "ranking": "Ranking",
+    "restoredBody": "Si crees que no coinciden con lo que recuerdas o no estás sastisfecho con ellos, no dudes en revisar tus respuestas con el botón de \"Volver al cuestionario\" o empezar de nuevo con el botón de \"Reiniciar\" en la esquina superior izquierda.",
+    "restoredClose": "Cerrar",
+    "restoredTitle": "¡Tus resultados han sido restaurados!",
     "resultsSaved": "Tus resultados han sido guardados",
     "saveResults": "Guardar resultados",
+    "savedBody": "Guarda este vínculo y accede directamente a tus resultados la próxima vez que visites el electómetro:",
+    "savedMnemonicLabel": "Alternativamente puedes guardar la clave generada a continuación:",
+    "savedTitle": "Guardar mis resultados",
     "scrollHint": "Desliza para ver más",
     "similarity": "Similaridad",
     "statements": "afirmaciones.",
@@ -1301,7 +1318,16 @@
     "topicSuggestionSending": "Enviando...",
     "topicSuggestionSuccess": "¡Gracias por tu ayuda!",
     "topicSuggestionTitle": "Sugerencia",
-    "topicSuggestionTopicLabel": "Tema"
+    "topicSuggestionTopicLabel": "Tema",
+    "versionMajorBody": "Tus resultados ya no son compatibles con la versión actual del electómetro. Te llevaremos a la página inicial para que puedas obtener resultados actuales.",
+    "versionMajorClose": "Cerrar",
+    "versionMajorTitle": "¡Hay una nueva versión!",
+    "versionMinorBody": "Hemos actualizado el electómetro con información actual. Te pedimos reiniciar la encuesta para obtener resultados válidos.",
+    "versionMinorClose": "Cerrar",
+    "versionMinorTitle": "Resultados obsoletos",
+    "versionPatchBody": "Hemos actualizado nuestras fuentes desde la última vez que completaste el cuestionario. Esto no influye en tu resultado final. Si lo deseas, puedes revisar tus respuestas o empezar desde cero.",
+    "versionPatchClose": "Cerrar",
+    "versionPatchTitle": "Información actualizada"
   },
   "topicImportance": {
     "description": "Selecciona las casillas con los temas que son muy importantes para ti.\n \nPresiona sobre la \"i\" para más contexto.",
