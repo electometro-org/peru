@@ -142,7 +142,7 @@ jobs:
         run: |
           npx @tolgee/cli push \
             --languages es-qa \
-            --files-template 'app/{languageTag}.{extension}' \
+            --files-template 'app/i18n/{languageTag}.{extension}' \
             --force-mode OVERRIDE \
             --api-url $TOLGEE_API_URL \
             --api-key $TOLGEE_API_KEY
