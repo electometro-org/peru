@@ -1,0 +1,172 @@
+name: Release QA
+
+on:
+  workflow_dispatch:
+    inputs:
+      upload_data:
+        description: 'Upload latest data JSONs to QA bucket?'
+        required: true
+        type: choice
+        default: 'yes'
+        options:
+          - 'yes'
+          - 'no'
+
+permissions:
+  contents: write
+
+jobs:
+  upload-data:
+    if: inputs.upload_data == 'yes'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger release.yml in electometro-org.github.io (QA mode)
+        env:
+          GH_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
+        run: |
+          echo "Triggering data upload to QA bucket..."
+          gh workflow run release.yml \
+            --repo electometro-org/electometro-org.github.io \
+            --field environment=qa
+          echo "Waiting for workflow to complete..."
+          sleep 10
+          # Wait for the workflow to complete (timeout after 5 minutes)
+          for i in {1..30}; do
+            STATUS=$(gh run list --repo electometro-org/electometro-org.github.io --workflow=release.yml --limit=1 --json status --jq '.[0].status')
+            if [ "$STATUS" = "completed" ]; then
+              CONCLUSION=$(gh run list --repo electometro-org/electometro-org.github.io --workflow=release.yml --limit=1 --json conclusion --jq '.[0].conclusion')
+              if [ "$CONCLUSION" = "success" ]; then
+                echo "Data upload completed successfully"
+                break
+              else
+                echo "Data upload failed with conclusion: $CONCLUSION"
+                exit 1
+              fi
+            fi
+            echo "Waiting... ($i/30)"
+            sleep 10
+          done
+
+  deploy-app:
+    needs: [upload-data]
+    if: always() && (needs.upload-data.result == 'success' || needs.upload-data.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deploy-app.yml (QA mode)
+        env:
+          GH_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
+        run: |
+          echo "Triggering app deployment to QA..."
+          gh workflow run deploy-app.yml \
+            --repo electometro-org/peru-assets \
+            --field environment=qa
+          echo "Waiting for deployment to start..."
+          sleep 10
+          # Wait for the workflow to complete (timeout after 10 minutes)
+          for i in {1..60}; do
+            STATUS=$(gh run list --repo electometro-org/peru-assets --workflow=deploy-app.yml --limit=1 --json status --jq '.[0].status')
+            if [ "$STATUS" = "completed" ]; then
+              CONCLUSION=$(gh run list --repo electometro-org/peru-assets --workflow=deploy-app.yml --limit=1 --json conclusion --jq '.[0].conclusion')
+              if [ "$CONCLUSION" = "success" ]; then
+                echo "App deployment completed successfully"
+                break
+              else
+                echo "App deployment failed with conclusion: $CONCLUSION"
+                exit 1
+              fi
+            fi
+            echo "Waiting... ($i/60)"
+            sleep 10
+          done
+
+  pull-translations:
+    needs: [deploy-app]
+    if: always() && needs.deploy-app.result == 'success'
+    uses: ./.github/workflows/pull-qa-translations.yml
+    secrets: inherit
+
+  update-upload-translations:
+    needs: [pull-translations]
+    if: always() && needs.pull-translations.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Pull latest changes
+        run: git pull origin ${{ github.ref_name }}
+
+      - name: Clone electometro-org.github.io (data repo)
+        uses: actions/checkout@v4
+        with:
+          repository: electometro-org/electometro-org.github.io
+          path: electometro-data
+          token: '${{ secrets.GH_ORG_TOKEN }}'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run merge script
+        run: python app/scripts/merge_i18n_keys_from_json_with_qa.py
+
+      - name: Extract QA version
+        id: version
+        run: |
+          QA_VERSION=$(python -c "import json; print(json.load(open('app/i18n/es-qa.json'))['data']['version']['qa'])")
+          echo "qa_version=$QA_VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted QA version: $QA_VERSION"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Tolgee CLI
+        run: npm install -g @tolgee/cli
+
+      - name: Push translations to Tolgee
+        env:
+          TOLGEE_API_URL: ${{ secrets.TOLGEE_API_URL }}
+          TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY_APP }}
+        run: |
+          npx @tolgee/cli push \
+            --path app/i18n \
+            --languages es-qa \
+            --force-mode OVERRIDE \
+            --api-url $TOLGEE_API_URL \
+            --api-key $TOLGEE_API_KEY
+
+      - name: Tag keys in Tolgee
+        env:
+          TOLGEE_API_URL: ${{ secrets.TOLGEE_API_URL }}
+          TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY_APP }}
+        run: |
+          npx @tolgee/cli tag \
+            --extractor ./app/scripts/tolgee-extractor.js \
+            --patterns 'app/i18n/es-qa.json' \
+            --filter-extracted \
+            --untag 'qa-v*' \
+            --tag 'qa-v${{ steps.version.outputs.qa_version }}' \
+            --api-url $TOLGEE_API_URL \
+            --api-key $TOLGEE_API_KEY
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add app/i18n/es-qa.json
+          git commit -m "Release QA: Update translations (v${{ steps.version.outputs.qa_version }})" || true
+          git push
+
+      - name: Publish to CDN
+        env:
+          TOLGEE_API_URL: ${{ secrets.TOLGEE_API_URL }}
+          TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY_APP }}
+        run: |
+          curl -L -X POST "${TOLGEE_API_URL}/v2/projects/34/content-delivery-configs/1" \
+            -H "X-API-Key: ${TOLGEE_API_KEY}"
