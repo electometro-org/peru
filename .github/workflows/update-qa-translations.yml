@@ -28,6 +28,35 @@ jobs:
       - name: Run merge script
         run: python app/scripts/merge_i18n_keys_from_json_with_qa.py
 
+      - name: Extract QA version
+        id: version
+        run: |
+          QA_VERSION=$(python -c "import json; print(json.load(open('app/i18n/es-qa.json'))['data']['version']['qa'])")
+          echo "qa_version=$QA_VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted QA version: $QA_VERSION"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Tolgee CLI
+        run: npm install -g @tolgee/cli
+
+      - name: Tag keys in Tolgee
+        env:
+          TOLGEE_API_URL: ${{ secrets.TOLGEE_API_URL }}
+          TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY_APP }}
+        run: |
+          npx @tolgee/cli tag \
+            --extractor ./app/scripts/tolgee-extractor.js \
+            --patterns '*' \
+            --filter-extracted \
+            --untag 'qa-v*' \
+            --tag 'qa-v${{ steps.version.outputs.qa_version }}' \
+            --api-url $TOLGEE_API_URL \
+            --api-key $TOLGEE_API_KEY
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
