@@ -48,6 +48,12 @@
     "privacyPolicyLink": "Política de Privacidad",
     "title": "Configuración de Privacidad"
   },
+  "data": {
+    "version": {
+      "production": "1.0.0",
+      "qa": "1.0.0"
+    }
+  },
   "demographics": {
     "age": "Edad",
     "analyticsConsent": "Ayudar a detectar abusos y mejorar esta encuesta",
