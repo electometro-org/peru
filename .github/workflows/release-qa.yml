@@ -146,11 +146,20 @@ jobs:
           TOLGEE_API_URL: ${{ secrets.TOLGEE_API_URL }}
           TOLGEE_API_KEY: ${{ secrets.TOLGEE_API_KEY_APP }}
         run: |
+          # First, delete the old tags
           npx @tolgee/cli tag \
             --extractor ./app/scripts/tolgee-extractor.js \
             --patterns 'app/i18n/es-qa.json' \
             --filter-extracted \
             --untag 'qa-v*' \
+            --api-url $TOLGEE_API_URL \
+            --api-key $TOLGEE_API_KEY
+
+          # Then add the correct one
+          npx @tolgee/cli tag \
+            --extractor ./app/scripts/tolgee-extractor.js \
+            --patterns 'app/i18n/es-qa.json' \
+            --filter-extracted \
             --tag 'qa-v${{ steps.version.outputs.qa_version }}' \
             --api-url $TOLGEE_API_URL \
             --api-key $TOLGEE_API_KEY
