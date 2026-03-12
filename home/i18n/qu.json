@@ -1,0 +1,103 @@
+{
+  "attributions": {
+    "author": "Ruwaq",
+    "footer": "Llapan logotipo nisqakunaqa sapankankuq partido político nisqakunaqmi. Kay sitiopi llamk'achisqankuqa willaypaq chaymanta yachachiypaqlla, mayqin licenciakunachus lluqsichisqa kasqankumanhina.",
+    "intro": "Kay web nisqapi rikuchisqa pulitiku partidukunap logotiponkunaqa Wikimedia Commons nisqamanta hamun, kay licenciakunayuqmi:",
+    "license": "Licencia",
+    "publicDomain": "Dominio Público nisqa",
+    "source": "Qallariy",
+    "title": "Atribuciones nisqakuna"
+  },
+  "features": {
+    "accessible": {
+      "description": "Computadorakunapi, tabletakunapi otaq celularkunapipas allintan llank’an. Maypachachus munasqaykipi, maypi munasqaykipipas llamk’achiy.",
+      "title": "Ima Dispositivopipas yaykuy atiy"
+    },
+    "fast": {
+      "description": "Manaraq 5 minutollapi tapukuy qillqata hunt’achiy hinaspa chaylla resultadokunata tariy. Ñam!",
+      "title": "Utqaylla hinaspa Facil"
+    },
+    "matching": {
+      "description": "Algoritmoyku kutichiyniykikunata partido políticokunap plataformankunawan tupachin. Kayhinatam yupayku mayqin candidatokunawan \"tunchasqa\" kasqaykita.",
+      "title": "Kaynatam llamkan"
+    },
+    "objective": {
+      "description": "Metodología transparente nisqa, propuesta nisqakunapi, hinallataq posición pública nisqapipas, chay partidokunaq.",
+      "title": "Chayana"
+    },
+    "privacy": {
+      "description": "Mana sapalla willayniykimanta waqaychaykuchu. Chaymantapas manam willakuykunataqa willanakuykuchu politicokunawan nitaq sapan runakunawanpas.",
+      "title": "Datosniykikunata waqaychayku"
+    },
+    "results": {
+      "description": "Sapa partidowan afinidadniykita qawariy hinaspa kutichiyniykikunata tupachiy posiciónninkuwan.",
+      "title": "Detallada Resultados"
+    },
+    "subtitle": "Allin yachaywan tanteanapaq confiable hinaspa chuya yanapakuy. Manam niykuchu piman votanaykipaq. Yanapaykiku intereses políticos nisqaykikunata ñawpaqman churanaykipaq hinaspa qawanaykipaq mayqin partidokuna hinaspa candidatokuna ñawpaqnikipi kasqankuta.",
+    "title": "¿Imataq Electrómetro nisqa?"
+  },
+  "footer": {
+    "about": {
+      "features": "Kaqninkuna",
+      "howItWorks": "Imaynatataq Llank’an",
+      "startTest": "Prueba qallariy",
+      "title": "Sobre"
+    },
+    "description": "Mana pimanpas sayapakuq yanapakuy mayqin partido político aswan allinta yuyayniykikunata, chaninchasqaykitapas riqsichin chayta yachanaykipaq.",
+    "disclaimer": "Willanapaq yanapakuy. Manataqmi consejo electoral oficial nisqachu.",
+    "info": {
+      "attributions": "Atribuciones nisqakuna",
+      "contact": "Tupaqmasi",
+      "methodology": "Metodología nisqamanta",
+      "privacy": "Sapanchasqa willakuy",
+      "title": "Willakuy"
+    }
+  },
+  "hero": {
+    "badge": "Akllanakuykuna 2026 watapi",
+    "cta": {
+      "learnMore": "Astawan yachay",
+      "start": "Qallariy"
+    },
+    "stats": {
+      "candidates": "Candidatos nisqakuna",
+      "necessary": "Manakusqa",
+      "questions": "Tapukuykuna"
+    },
+    "title": {
+      "discover": "Allin yuyaywan decidiy.",
+      "represents": "5 minutu",
+      "who": "in"
+    }
+  },
+  "howItWorks": {
+    "cta": {
+      "button": "Kunanmanta qallariy",
+      "description": "Minutosllapi tariy mayqin partido político aswan allinta yuyayniykikunata representan",
+      "title": "¿Qallarinaykipaq listochu kashanki?"
+    },
+    "step1": {
+      "description": "Willay hukniray política nisqamanta rimanaykipaq, mana pimanpas sayapakuspa otaq contranpi kasqaykita. Mana seguro kaspaqa tapukuykunataqa saltawaqmi.",
+      "title": "Tapukuykunata kutichiy"
+    },
+    "step2": {
+      "description": "Algoritmoykuqa kutichiyniykikunata tupachin llapa partido político nisqakunaq posiciónninwan.",
+      "title": "Perfilniykita t’aqwiriy"
+    },
+    "step3": {
+      "description": "Ima partikunachus yuyayniykiwan aswan allinta tupan chayta qhaway, chaymanta yachay llalliq chikan kayninkunamanta.",
+      "title": "T’inkisqa kasqaykita tariy"
+    },
+    "step4": {
+      "description": "Kay willakuykunata pusaq hina apaykachana, aswan allin yachaywan, allin yuyaywan akllanakuymanta tanteayta ruwanaykipaq.",
+      "title": "Allin yuyaywan decidiy"
+    },
+    "subtitle": "5 llamkayllapi, tariy partidota hinaspa candidato aswan allinta representan valorniykikunata",
+    "title": "¿Imaynatataq llamkan?"
+  },
+  "nav": {
+    "features": "Imataq",
+    "howItWorks": "Imaynatataq llamkan",
+    "start": "Qallariy"
+  }
+}
