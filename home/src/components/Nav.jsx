@@ -8,7 +8,6 @@ function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
