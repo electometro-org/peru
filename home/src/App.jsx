@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Nav from './components/Nav.jsx'
 import Home from './pages/Home.jsx'
+import { LanguageCycleProvider } from './contexts/LanguageCycle.jsx'
 
 function HomeWithRedirect() {
   useEffect(() => {
@@ -18,15 +18,17 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="App">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/atribuciones" element={<AttributionsPage />} />
-          <Route path="*" element={<HomeWithRedirect />} />
-        </Routes>
-        <Footer />
-      </div>
+      <LanguageCycleProvider>
+        <div className="App">
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/atribuciones" element={<AttributionsPage />} />
+            <Route path="*" element={<HomeWithRedirect />} />
+          </Routes>
+          <Footer />
+        </div>
+      </LanguageCycleProvider>
     </Router>
   )
 }
