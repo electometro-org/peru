@@ -1450,6 +1450,11 @@
     "september": "septiembre"
   },
   "nav": {
+    "backTo": {
+      "intro": "Volver a la introducción",
+      "quiz": "Volver a la encuesta",
+      "results": "Volver a los resultados"
+    },
     "backToSurvey": "Volver a la encuesta",
     "contact": "Contacto",
     "methodology": "Metodología",
