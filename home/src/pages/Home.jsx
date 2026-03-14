@@ -1,6 +1,8 @@
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import HowItWorks from '../components/HowItWorks'
+import Test from '../components/Test'
+
 
 function Home() {
   return (
@@ -8,6 +10,7 @@ function Home() {
       <Hero />
       <Features />
       <HowItWorks />
+      <Features />
     </>
   )
 }

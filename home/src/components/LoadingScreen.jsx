@@ -31,7 +31,9 @@ export function LoadingWrapper({ children, minDelay = 500 }) {
 
     useEffect(() => {
         const timer = setTimeout(() => setTimerDone(true), minDelay)
-        return () => clearTimeout(timer)
+        // Fallback: unblock after 3s regardless of carousel image load state
+        const fallback = setTimeout(() => setCarouselReady(true), 3000)
+        return () => { clearTimeout(timer); clearTimeout(fallback) }
     }, [minDelay])
 
     const showContent = timerDone && carouselReady
