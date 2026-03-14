@@ -1,0 +1,103 @@
+{
+  "attributions": {
+    "author": "Lurairi",
+    "footer": "Logotipo amuyunakax sapa partido políticoxankiwa. Kay sitirujan wakicht'asiririx yatiyañatakiw, yatiqañatakiw, uk licencianakampi luräskarakiwa.",
+    "intro": "Kay pàgina webjan rikuchata partido políticonakan logotiponakax Wikimedia Commons ukanxtanwa, ukax kay licencianakayniwa:",
+    "license": "Licencia",
+    "publicDomain": "Dominio Público",
+    "source": "Purapi",
+    "title": "Atribuciones"
+  },
+  "features": {
+    "accessible": {
+      "description": "Computadoranx, tabletanx, janiw mä celularpachax allaxtwa. Kunawsatix munasktax, kawkinx munasktax wakichit.",
+      "title": "Kunaymara dispositivonx yanapxañani"
+    },
+    "fast": {
+      "description": "5 minuton anqax tapukiw phaxsipxi ukhamaraki resultadox chiqanchasiwayxi. ¡Listuwa!",
+      "title": "Jasakiw ukhamaraki jan wakiskiriti"
+    },
+    "matching": {
+      "description": "Algoritmojamax kutiyawinakmax partido políticonakan phuqhawinakampiw tupachxarakiwa. Ukhamax yatiqxapxta kunanakiri candidatonakampiw \"tinchasita\" kasktax.",
+      "title": "Ukhamaw luräski"
+    },
+    "objective": {
+      "description": "Metodología ch'uqax, partido políticonakan phuqhawi ukhamaraki pública posicionnakankiwa.",
+      "title": "Chiqanxa"
+    },
+    "privacy": {
+      "description": "Janiw sapxirjamax yatiyawinakmax apaqxapkiti. Ukhamaraki janiw yatiyañ yatiyañapax politicunakampiw nitax sapanx runanakampiw yatichkiti.",
+      "title": "Yatiyawinakma wararinxa"
+    },
+    "results": {
+      "description": "Sapa partídompiw afinidadmax rikit, ukhamaraki kutiyawinakmax tupachit posiciónnakampiw.",
+      "title": "Juk'ampi Resultados"
+    },
+    "subtitle": "Jan pachataki yanapt'añ confiable ukhamaraki ch'uqa yanapt'awi. Janiw ninxapkiti kunapachax vutañasktax. Yanapt'xapxta política amuyunakma nayra apañatakiw ukhamaraki rikit kunanaka partidos ukhamaraki candidatos nayranxama kasjamawa.",
+    "title": "¿Kunatix Electrómetro?"
+  },
+  "footer": {
+    "about": {
+      "features": "Katuqawinaka",
+      "howItWorks": "Kawkhamati Luräski",
+      "startTest": "Prueba qalltaña",
+      "title": "Apnaqaña"
+    },
+    "description": "Jan pachataki yanapt'awi kunanaka partido políticox askat amuyunakma, chanint'awinakmax rikipxañapataki.",
+    "disclaimer": "Yatiyañ yanapt'awi. Janiw consejo electoral oficial ukiwa.",
+    "info": {
+      "attributions": "Atribuciones",
+      "contact": "Aruskipt'añani",
+      "methodology": "Metodología",
+      "privacy": "Sapxir Yatiyawi",
+      "title": "Yatiyawi"
+    }
+  },
+  "hero": {
+    "badge": "Arunaka 2026",
+    "cta": {
+      "learnMore": "Juk'ampi yatiña",
+      "start": "Qalltaña"
+    },
+    "stats": {
+      "candidates": "Candidatos",
+      "necessary": "Wakiskiriti",
+      "questions": "Tapukiwinaka"
+    },
+    "title": {
+      "discover": "Yäqat qhanacht'añani",
+      "represents": "5 minuto",
+      "who": "ukat"
+    }
+  },
+  "howItWorks": {
+    "cta": {
+      "button": "Jichhax qalltaña",
+      "description": "Minutonx yatiña kunanaka partido políticox askat amuyunakma representani",
+      "title": "¿Qalltañatakix listutati?"
+    },
+    "step1": {
+      "description": "Yaticht'a política temamax apnaqañataki, jan pachataki ukham mä contranx kasktax. Jan segurotkasktax tapukiwinakax saltañax walikiskiwa.",
+      "title": "Tapukiwinakax kutiyaña"
+    },
+    "step2": {
+      "description": "Algoritmojamax kutiyawinakmax tupachxarakiwa llapan partido políticonakan posiciónnakampiw.",
+      "title": "Perfilmax jilt'ayaña"
+    },
+    "step3": {
+      "description": "Kunanaka partidox amuyumapiw askat tupxañi ukax rikit, ukhamaraki yatiña llapan chikañanaka.",
+      "title": "Tinchasitax yatiña"
+    },
+    "step4": {
+      "description": "Kay yatiyawinakax purirapxi yatiyañataki, askat yäqat, yäqat yatiqatax vutaña amtasiñataki.",
+      "title": "Yäqat qhanacht'añani"
+    },
+    "subtitle": "5 lurawinx, partido ukhamaraki candidato yatiña askat chanint'awinakma representani",
+    "title": "¿Kawkhamati luräski?"
+  },
+  "nav": {
+    "features": "Kunatix",
+    "howItWorks": "Kawkhamati luräski",
+    "start": "Qalltaña"
+  }
+}
