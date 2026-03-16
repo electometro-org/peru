@@ -12,6 +12,16 @@ function Nav() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault()
+    setIsMenuOpen(false)
+    const element = document.getElementById(sectionId)
+    if (element) {
+      smoothScrollTo(element)
+    }
+    navigate(`/#${sectionId}`, { replace: true })
+  }
+
   const handleLogoClick = (e) => {
     e.preventDefault()
     const heroElement = document.getElementById('hero')
@@ -44,24 +54,24 @@ function Nav() {
 
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <Link to="/#caracteristicas" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="#caracteristicas" className="nav-link" onClick={(e) => handleSectionClick(e, 'caracteristicas')}>
               <T keyName="nav.features">Características</T>
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link to="/#como-funciona" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="#como-funciona" className="nav-link" onClick={(e) => handleSectionClick(e, 'como-funciona')}>
               <T keyName="nav.howItWorks">Cómo funciona</T>
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link to="/#quienes-somos" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="#quienes-somos" className="nav-link" onClick={(e) => handleSectionClick(e, 'quienes-somos')}>
               <T keyName="nav.whoWeAre">Quiénes somos</T>
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
-            <Link to="/#kit-de-prensa" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="#kit-de-prensa" className="nav-link" onClick={(e) => handleSectionClick(e, 'kit-de-prensa')}>
               <T keyName="nav.pressKit">Kit de prensa</T>
-            </Link>
+            </a>
           </li>
           {/* <li className="nav-item">
             <Link to="/#colaboraciones" className="nav-link" onClick={() => setIsMenuOpen(false)}>
