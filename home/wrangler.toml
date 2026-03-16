@@ -20,9 +20,10 @@ not_found_handling = "single-page-application"
 run_worker_first = [ "/" ]
 
 [env.qa.assets]
+binding = "ASSETS"
 not_found_handling = "single-page-application"
-# Comment out for local testing of worker
-run_worker_first = false
+# Comment out to test SEO worker in local mode
+run_worker_first = ["/electometro/a"]
 
 [route]
 # Change pattern and zone_name randomly to preview locally (otherwise wrangler fails to load _headers)
