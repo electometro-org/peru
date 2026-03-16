@@ -37,52 +37,69 @@ body {
   width: 100%;
 }
 
+/* Base: no animation for old browsers (Safari 12 and lower) */
 .lang-curtain {
-  display: inline-grid;
-  grid-template-areas: "stack";
-  align-items: baseline;
-  position: relative;
+  display: inline;
 }
 
 .lang-curtain-prev {
-  -webkit-animation: curtainFadeOut 0.6s ease both;
-  animation: curtainFadeOut 0.6s ease both;
+  display: none;
 }
 
 .lang-curtain-next {
-  -webkit-animation: curtainReveal 0.6s ease both;
-  animation: curtainReveal 0.6s ease both;
-  -webkit-clip-path: inset(0 100% 0 0);
-  clip-path: inset(0 100% 0 0);
+  display: inline;
 }
 
-.lang-curtain--mask .lang-curtain-next {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 60%, transparent 100%);
-  mask-image: linear-gradient(90deg, #000 0%, #000 60%, transparent 100%);
-  -webkit-mask-size: 200% 100%;
-  mask-size: 200% 100%;
-  -webkit-mask-position: 100% 0;
-  mask-position: 100% 0;
-  -webkit-animation: curtainMaskReveal 0.7s ease both;
-  animation: curtainMaskReveal 0.7s ease both;
-}
-.lang-curtain-prev,
-.lang-curtain-next {
-  grid-area: stack;
-}
+/* Modern browsers: enable animation (Safari 14.1+, Chrome 84+, Firefox 63+) */
+@supports (gap: 1px) {
+  .lang-curtain {
+    display: inline-grid;
+    grid-template-areas: "stack";
+    align-items: baseline;
+    position: relative;
+  }
 
-.lang-curtain--delay-500 .lang-curtain-next,
-.lang-curtain--delay-500 .lang-curtain-prev {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+  .lang-curtain-prev {
+    display: inline;
+    grid-area: stack;
+    -webkit-animation: curtainFadeOut 0.6s ease both;
+    animation: curtainFadeOut 0.6s ease both;
+  }
+
+  .lang-curtain-next {
+    grid-area: stack;
+    -webkit-animation: curtainReveal 0.6s ease both;
+    animation: curtainReveal 0.6s ease both;
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+  }
+
+  .lang-curtain--mask .lang-curtain-next {
+    -webkit-clip-path: none;
+    clip-path: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 60%, transparent 100%);
+    mask-image: linear-gradient(90deg, #000 0%, #000 60%, transparent 100%);
+    -webkit-mask-size: 200% 100%;
+    mask-size: 200% 100%;
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-animation: curtainMaskReveal 0.7s ease both;
+    animation: curtainMaskReveal 0.7s ease both;
+  }
 }
 
 .lang-curtain--hero-discover .lang-curtain-next[data-lang="qu"],
 .lang-curtain--hero-discover .lang-curtain-prev[data-lang="qu"] {
   font-size: 0.80em;
   letter-spacing: 0.01em;
+}
+
+@supports (gap: 1px) {
+  .lang-curtain--delay-500 .lang-curtain-next,
+  .lang-curtain--delay-500 .lang-curtain-prev {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
 }
 
 @-webkit-keyframes curtainReveal {
@@ -155,28 +172,18 @@ body {
   }
 }
 
+
 @media (prefers-reduced-motion: reduce) {
-  .lang-curtain {
-    -webkit-animation: none !important;
-    animation: none !important;
-    -webkit-clip-path: none;
-    clip-path: none;
+  .lang-curtain-prev {
+    display: none !important;
   }
 
   .lang-curtain-next {
     -webkit-animation: none !important;
     animation: none !important;
-    -webkit-clip-path: none;
-    clip-path: none;
-  }
-
-  .lang-curtain--mask .lang-curtain-next {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-
-  .lang-curtain-prev {
-    -webkit-animation: none !important;
-    animation: none !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
   }
 }
