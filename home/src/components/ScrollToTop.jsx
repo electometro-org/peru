@@ -1,11 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect,useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { smoothScrollToHash } from '../utils/smoothScroll'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
+  const isInitialMount = useRef(true)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Skip hash scrolling on initial page load (handled by App.jsx)
+    if (isInitialMount.current) {
+      isInitialMount.current = false
+      window.scrollTo(0, 0)
+      return
+    }
+
     // If there's a hash, scroll to the anchor with polyfill for Safari 12
     if (hash) {
       setTimeout(() => {
