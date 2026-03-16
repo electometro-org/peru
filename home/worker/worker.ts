@@ -16,7 +16,6 @@ interface Env {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    console.log('Hi there')
     if (env.ENVIRONMENT === 'production') {
       const ua = request.headers.get('user-agent') || '';
       const acceptHeader = request.headers.get('accept') || '';
@@ -29,7 +28,6 @@ export default {
     }
 
     // QA, normal users, or non-crawler: serve from assets
-    console.log('Good bye :(')
     return env.ASSETS.fetch(request);
   },
 };
