@@ -1580,6 +1580,13 @@
     "copyUrl": "Copiar enlace",
     "detailedMode": "Ranking",
     "expandSectionCta": "Presiona aquí para expandir",
+    "fightMode": {
+      "button": "MODO BATALLA",
+      "cancel": "Cancelar",
+      "cta": "¡A LUCHAR!",
+      "description": "Serás redirigido a capibarismo.com con tus 4 mejores candidatos para un torneo de comparación.",
+      "title": "MODO BATALLA"
+    },
     "fullMatchesHeading": "Coincides plenamente en [[nrOfMatchedTopics]] temas",
     "goBackToList": "Volver al ranking",
     "groupTopicsHint": "Toca un tema para ver más detalles",
