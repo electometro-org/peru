@@ -1,5 +1,6 @@
 import { T } from "@tolgee/react"
 import './Features.css'
+import VideoSection from './VideoSection'
 
 function Features() {
   const features = [
@@ -58,6 +59,7 @@ function Features() {
             <T keyName="features.subtitle">Una herramienta confiable y transparente para tomar decisiones informadas</T>
           </p>
         </div>
+        <VideoSection />
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">

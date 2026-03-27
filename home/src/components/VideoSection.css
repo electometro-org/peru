@@ -1,5 +1,13 @@
 .video-section {
-  padding: 80px 20px;
+  padding-bottom: 6rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    padding-bottom: 4rem;
+  }
 }
 
 .video-container {
