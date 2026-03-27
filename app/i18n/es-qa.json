@@ -1566,6 +1566,15 @@
     "activeSelectionSimilarityPercentage": "Similitud",
     "analysis": "Análisis",
     "candidates": "Candidatos presidenciales",
+    "capictive": {
+      "cancel": "Cancelar",
+      "ctaButton": "Comparar en Capictive →",
+      "ctaDescription": "Compara en detalle tu Top 5 antes de votar.",
+      "ctaTitle": "¡Investiga a los candidatos! \uD83D\uDD0D",
+      "modalCta": "Comparar en Capictive →",
+      "modalDescription": "Compara tu Top 5 en detalle en Capictive antes de decidir tu voto.",
+      "modalTitle": "¡Investiga antes de votar!"
+    },
     "coincidenceLevelTitle": "Similitud",
     "collapseSectionCta": "Presiona aquí para cerrar",
     "compactMode": "Detalles",
