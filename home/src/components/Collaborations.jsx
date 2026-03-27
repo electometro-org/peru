@@ -26,7 +26,7 @@ function Collaborations() {
         <div className="collaborations-types">
           {types.map((type, index) => (
             <div key={index} className="collab-type-card">
-              <a href={type.link} target="_blank" rel="noopener noreferrer">
+              <a href={type.link} target="_blank" rel="noopener noreferrer" className="collab-type-image-wrapper">
                 <img src={type.image} alt={type.titleDefault} className="collab-type-image" />
               </a>
               <a href={type.link} target="_blank" rel="noopener noreferrer" className="collab-type-link">
