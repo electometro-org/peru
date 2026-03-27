@@ -3,7 +3,8 @@ import './Collaborations.css'
 
 function Collaborations() {
   const types = [
-    { image: '/static/collaborations/capictive.jpeg', link: 'https://www.capictive.app/', titleKey: 'collaborations.type1.title', titleDefault: 'capictive.app', descKey: 'collaborations.type1.desc', descDefault: 'En proceso' },
+    { image: '/static/collaborations/capictive.jpeg', link: 'https://www.capictive.app/', titleKey: 'collaborations.type1.title', titleDefault: 'capictive.app', descKey: 'collaborations.type1.desc', descDefault: 'Investiga a detalle' },
+    { image: '/static/collaborations/capi_logo.webp', link: 'https://capibarismo.com/', titleKey: 'collaborations.type2.title', titleDefault: 'capibarismo.com', descKey: 'collaborations.type2.desc', descDefault: '¡A luchar!' },
   ]
 
   return (
