@@ -16,7 +16,10 @@ interface Env {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    if (env.ENVIRONMENT === 'production') {
+    // Only run SEO worker in production and when the binding is available
+    // TODO: check if works, otherwise as before:
+    // if (env.ENVIRONMENT === 'production') { 
+    if (env.ENVIRONMENT === 'production' && env.SEO_WORKER) { 
       const ua = request.headers.get('user-agent') || '';
       const acceptHeader = request.headers.get('accept') || '';
 

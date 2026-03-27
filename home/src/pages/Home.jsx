@@ -5,11 +5,13 @@ import WhoWeAre from '../components/WhoWeAre'
 import PressKit from '../components/PressKit'
 import Collaborations from '../components/Collaborations'
 import CtaSection from '../components/CtaSection'
+import VideoSection from '../components/VideoSection'
 
 function Home() {
   return (
     <>
       <Hero />
+      <VideoSection />
       <Features />
       <HowItWorks />
       <WhoWeAre />

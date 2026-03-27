@@ -43,6 +43,15 @@ function PartyCarousel() {
     }
   }
 
+  // Added: count failed images too so the loading screen doesn't get stuck
+  const handleImageError = () => {
+    loadedCount.current += 1
+    if (loadedCount.current >= parties.length && !hasSignaled.current) {
+      hasSignaled.current = true
+      setCarouselReady(true)
+    }
+  }
+
   return (
     <div className="party-carousel">
       <div className="carousel-track">
@@ -54,6 +63,7 @@ function PartyCarousel() {
               alt={party.name}
               className="party-logo"
               onLoad={handleImageLoad}
+              onError={handleImageError} // Error handling
             />
           </div>
         ))}
