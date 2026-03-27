@@ -5,7 +5,7 @@ function WhoWeAre() {
   const members = [
     { image: '/static/team/elazo.jpeg', nameKey: 'whoWeAre.member1.name', nameDefault: 'Esteban Lazo', roleKey: 'whoWeAre.member1.role', roleDefault: 'Director del proyecto - elazo@decide.pe' },
     { image: '/static/team/jvalqui.jpeg', nameKey: 'whoWeAre.member2.name', nameDefault: 'José Valqui', roleKey: 'whoWeAre.member2.role', roleDefault: 'Investigador principal - jvalqui@decide.pe' },
-    // { image: '/static/team/lhaberle.jpeg', nameKey: 'whoWeAre.member3.name', nameDefault: 'Luka Haberle', roleKey: 'whoWeAre.member3.role', roleDefault: 'Coordinador' },
+    { image: '/static/team/nleon.webp', nameKey: 'whoWeAre.member3.name', nameDefault: 'Nicolás León', roleKey: 'whoWeAre.member3.role', roleDefault: 'Responsable de comunicaciones - nleon@decide.pe' },
   ]
 
   return (
