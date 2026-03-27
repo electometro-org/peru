@@ -1569,8 +1569,8 @@
     "capictive": {
       "cancel": "Cancelar",
       "ctaButton": "Comparar en Capictive →",
-      "ctaDescription": "Compara en detalle tu Top 5 antes de votar.",
-      "ctaTitle": "¡Investiga a los candidatos! \uD83D\uDD0D",
+      "ctaDescription": "Compara tu Top 5 antes de votar.",
+      "ctaTitle": "¡Investiga a los partidos! \uD83D\uDD0D",
       "modalCta": "Comparar en Capictive →",
       "modalDescription": "Compara tu Top 5 en detalle en Capictive antes de decidir tu voto.",
       "modalTitle": "¡Investiga antes de votar!"
@@ -1591,6 +1591,7 @@
     "fightMode": {
       "button": "MODO BATALLA",
       "cancel": "Cancelar",
+      "ct": "¡A LUCHAR!",
       "cta": "¡A LUCHAR!",
       "description": "Serás redirigido a capibarismo.com con tus 4 mejores candidatos para un torneo de comparación.",
       "title": "MODO BATALLA"
