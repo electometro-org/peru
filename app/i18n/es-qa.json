@@ -1571,7 +1571,7 @@
       "cancel": "Cancelar",
       "ctaButton": "Comparar en Capictive →",
       "ctaDescription": "Compara tu Top 5 antes de votar.",
-      "ctaTitle": "¡Investiga a los partidos! 🔍",
+      "ctaTitle": "¡Investiga a los partidos! \uD83D\uDD0D",
       "modalCta": "Comparar en Capictive →",
       "modalDescription": "Compara tu Top 5 en detalle en Capictive antes de decidir tu voto.",
       "modalTitle": "¡Investiga antes de votar!"
@@ -1625,7 +1625,7 @@
     "topicSuggestionCancel": "Cancelar",
     "topicSuggestionContactLabel": "Tu nombre",
     "topicSuggestionContactPlaceholder": " ",
-    "topicSuggestionCta": "Enviar sugerencia 📬",
+    "topicSuggestionCta": "Enviar sugerencia \uD83D\uDCEC",
     "topicSuggestionEmailError": "Por favor introduce una dirección válida",
     "topicSuggestionEmailLabel": "Correo electrónico",
     "topicSuggestionEmailPlaceholder": " ",
