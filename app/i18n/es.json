@@ -50,8 +50,8 @@
   },
   "data": {
     "version": {
-      "production": "1.2.4",
-      "qa": "1.2.4"
+      "production": "1.2.5",
+      "qa": "1.2.5"
     }
   },
   "demographics": {
@@ -172,7 +172,7 @@
         "t11": "Por falta de información, se tomó la posición del partido: El plan de gobierno no hace mención a la consulta previa, solo contempla la inclusión de comunidades campesinas, amazónicas e indígenas mediante infraestructura que genere focos de desarrollo económico local.",
         "t12": "Por falta de información, se tomó la posición del partido: El plan de gobierno reconoce la existencia de una “emergencia climática” (sequías, huaicos, pérdida de glaciares/biodiversidad) y contempla medidas de desarrollo sostenible con atención al cuidado del medio ambiente.",
         "t13": "Por falta de información, se tomó la posición del partido: El plan de gobierno afirma una disposición de promover de la inversión privada \"nacional y extranjera\", proponiendo una \"decidida apertura\" a capitales externos y afirmando que los inversionistas extranjeros \"PODRÁN VENIR CUANDO QUIERAN\" (en mayúsculas).",
-        "t14": "Por falta de información, se tomó la posición del partido: El plan de gobierno apunta a una gestión estatal ágil con un aparato estatal reducido y con redirección de recursos hacia la inversión pública.",
+        "t14": "Por falta de información, se tomó la posición del partido: El plan de gobierno apunta a una gestión estatal ágil con un aparato estatal reducido, pero también enfatiza la mejora de los servicios públicos.",
         "t15": "Belmont denunció en tono crítico que los \"caviares (...) promueven el matrimonio gay, el aborto, la destrucción de la familia y que no haya educación cívica\".",
         "t16": "Por falta de información, se tomó la posición del partido: El plan de gobierno contempla alcanzar niveles dignos de pensiones para jubilados, sin especificar una prioridad otorgada al sistema público o privado.",
         "t17": "Por falta de información, se tomó la posición del partido: El plan de gobierno enfatiza el reconocimiento de instancias jurídicas supranacionales y de convenios internacionales de DD.HH.",
@@ -521,7 +521,7 @@
         "t20": "Figuras del APRA como Jorge del Castillo y Luis Wilson Ugarte buscan reelegirse, evidenciando aceptación de la reelección parlamentaria dentro del partido.",
         "t3": "Propuse  sanciones \"a aquellas empresas corruptas para que nunca más vuelvan a contratar con el Estado\", evidenciando una posición de veto permanente, al menos para empresas, en relación con el Estado.",
         "t4": "Declaró que \"no a todos los podríamos calificar como ilegales\" y que \"hay que exigir estándares ambientales y laborales potentes\" para la pequeña minería, diferenciando entre mineros informales y criminales, aunque rechaza la ampliación del Reinfo.",
-        "t5": "El candidato se ha posicionado en contra de la despenalización del aborto así como del matrimonio igualitario.",
+        "t5": "En el debate presidencial dijo estar absolutamente a favor del aborto en casos de violación.",
         "t6": "Por falta de información, se tomó la posición del partido: El plan de gobierno propone acentuar la progresividad del sistema, quitando presión tributaria a los pequeños empresarios y eliminando exoneraciones de impuestos a grandes empresas.",
         "t7": "En una entrevista para Altavoz, declaró creer en la pena de muerte \"en abstracto\", mas \"no en el Perú y no en este momento\", por las implicaciones que eso tendría para la permanencia de Perú en el sistema interamericano.",
         "t8": "Por falta de información, se tomó la posición del partido: El plan de gobierno propone reforzar zonas críticas con redadas policiales permanentes con apoyo de las FFAA y mantener o ampliar estados de emergencia cuando sea necesario.",
@@ -837,7 +837,7 @@
         "t11": "El plan de gobierno no hace mención a la consulta previa, solo contempla la inclusión de comunidades campesinas, amazónicas e indígenas mediante infraestructura que genere focos de desarrollo económico local.",
         "t12": "El plan de gobierno reconoce la existencia de una “emergencia climática” (sequías, huaicos, pérdida de glaciares/biodiversidad) y contempla medidas de desarrollo sostenible con atención al cuidado del medio ambiente.",
         "t13": "El plan de gobierno afirma una disposición de promover de la inversión privada \"nacional y extranjera\", proponiendo una \"decidida apertura\" a capitales externos y afirmando que los inversionistas extranjeros \"PODRÁN VENIR CUANDO QUIERAN\" (en mayúsculas).",
-        "t14": "El plan de gobierno apunta a una gestión estatal ágil con un aparato estatal reducido y con redirección de recursos hacia la inversión pública.",
+        "t14": "El plan de gobierno apunta a una gestión estatal ágil con un aparato estatal reducido, pero también enfatiza la mejora de los servicios públicos.",
         "t15": "Por falta de información, se tomó la posición del candidato: Belmont denunció en tono crítico que los \"caviares (...) promueven el matrimonio gay, el aborto, la destrucción de la familia y que no haya educación cívica\".",
         "t16": "El plan de gobierno contempla alcanzar niveles dignos de pensiones para jubilados, sin especificar una prioridad otorgada al sistema público o privado.",
         "t17": "El plan de gobierno enfatiza el reconocimiento de instancias jurídicas supranacionales y de convenios internacionales de DD.HH.",
@@ -1193,7 +1193,7 @@
         "t20": "Figuras del APRA como Jorge del Castillo y Luis Wilson Ugarte buscan reelegirse, evidenciando aceptación de la reelección parlamentaria dentro del partido.",
         "t3": "Por falta de información, se tomó la posición del candidato: Propuse  sanciones \"a aquellas empresas corruptas para que nunca más vuelvan a contratar con el Estado\", evidenciando una posición de veto permanente, al menos para empresas, en relación con el Estado.",
         "t4": "El plan de gobierno propone culminar la formalización de los REINFO vigentes, crear una nueva Ley MAPE, establecer ventanilla única digital, asistencia gratuita y trazabilidad completa para formalizar a mineros artesanales, pequeños y medianos.",
-        "t5": "Por falta de información, se tomó la posición del candidato: El candidato se ha posicionado en contra de la despenalización del aborto así como del matrimonio igualitario.",
+        "t5": "Por falta de información, se tomó la posición del candidato: En el debate presidencial dijo estar absolutamente a favor del aborto en casos de violación.",
         "t6": "El plan de gobierno propone acentuar la progresividad del sistema, quitando presión tributaria a los pequeños empresarios y eliminando exoneraciones de impuestos a grandes empresas.",
         "t7": "Por falta de información, se tomó la posición del candidato: En una entrevista para Altavoz, declaró creer en la pena de muerte \"en abstracto\", mas \"no en el Perú y no en este momento\", por las implicaciones que eso tendría para la permanencia de Perú en el sistema interamericano.",
         "t8": "El plan de gobierno propone reforzar zonas críticas con redadas policiales permanentes con apoyo de las FFAA y mantener o ampliar estados de emergencia cuando sea necesario.",
