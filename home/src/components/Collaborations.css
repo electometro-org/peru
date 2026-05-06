@@ -118,3 +118,9 @@
     font-size: 1.4rem;
   }
 }
+
+.attributions-divider {
+  border: none;
+  border-top: 1px solid rgba(217, 16, 35, 0.2);
+  margin: 3rem 0;
+}

@@ -3,13 +3,13 @@ import './WhoWeAre.css'
 
 function WhoWeAre() {
   const members = [
-    { image: '/static/team/elazo.jpeg', nameKey: 'whoWeAre.member1.name', nameDefault: 'Esteban Lazo', roleKey: 'whoWeAre.member1.role', roleDefault: 'Director del proyecto elazo@decide.pe' },
-    { image: '/static/team/jvalqui.jpeg', nameKey: 'whoWeAre.member2.name', nameDefault: 'José Valqui', roleKey: 'whoWeAre.member2.role', roleDefault: 'Responsable de investigación jvalqui@decide.pe' },
-    { image: '/static/team/nleon.webp', nameKey: 'whoWeAre.member3.name', nameDefault: 'Nicolás León', roleKey: 'whoWeAre.member3.role', roleDefault: 'Responsable de comunicaciones nleon@decide.pe' },
+    { image: '/static/team/elazo.jpeg', nameKey: 'whoWeAre.member1.name', nameDefault: 'Esteban Lazo', roleKey: 'whoWeAre.member1.role', roleDefault: 'Director del proyecto (elazo@decide.pe)' },
+    { image: '/static/team/jvalqui.jpeg', nameKey: 'whoWeAre.member2.name', nameDefault: 'José Valqui', roleKey: 'whoWeAre.member2.role', roleDefault: 'Responsable de investigación (jvalqui@decide.pe)' },
+    { image: '/static/team/nleon.webp', nameKey: 'whoWeAre.member3.name', nameDefault: 'Nicolás León', roleKey: 'whoWeAre.member3.role', roleDefault: 'Responsable de comunicaciones (nleon@decide.pe)' },
     { image: '/static/team/sfernandez.jpeg', nameKey: 'whoWeAre.member4.name', nameDefault: 'Sebastián Fernández', roleKey: 'whoWeAre.member4.role', roleDefault: 'Responsable de redes sociales' },
-    { image: '/static/team/lhaberle.jpeg', nameKey: 'whoWeAre.member5.name', nameDefault: 'Luka Haberle', roleKey: 'whoWeAre.member5.role', roleDefault: 'Investigador principal' },
     { image: '/static/team/asasieta.jpeg', nameKey: 'whoWeAre.member6.name', nameDefault: 'Ariana Sasieta', roleKey: 'whoWeAre.member6.role', roleDefault: 'Responsable de alianzas y comunicación institucional' },
-    { image: '/static/team/sgaitan.jpeg', nameKey: 'whoWeAre.member7.name', nameDefault: 'Sophia Gaitán', roleKey: 'whoWeAre.member7.role', roleDefault: 'Imagen pública y Responsable de alianzas y comunicación institucional' },
+    { image: '/static/team/sgaitan.jpeg', nameKey: 'whoWeAre.member7.name', nameDefault: 'Sophia Gaitán', roleKey: 'whoWeAre.member7.role', roleDefault: 'Responsable de alianzas y comunicación institucional e Imagen pública' },
+    { image: '/static/team/lhaberle.jpeg', nameKey: 'whoWeAre.member5.name', nameDefault: 'Luka Haberle', roleKey: 'whoWeAre.member5.role', roleDefault: 'Investigador principal' },
     { image: '/static/team/fsaba.jpeg', nameKey: 'whoWeAre.member8.name', nameDefault: 'Fernando Saba', roleKey: 'whoWeAre.member8.role', roleDefault: 'Desarrollador Full Stack' },
     { image: '/static/team/grios.jpeg', nameKey: 'whoWeAre.member9.name', nameDefault: 'Gabriel Ríos', roleKey: 'whoWeAre.member9.role', roleDefault: 'Desarrollador UX/UI y Creador de contenido en redes sociales' },
     { image: '/static/team/isar.jpeg', nameKey: 'whoWeAre.member10.name', nameDefault: 'Ignacio Sar Chávez', roleKey: 'whoWeAre.member10.role', roleDefault: 'Asesor de métodos' },
@@ -27,7 +27,7 @@ function WhoWeAre() {
           </h2>
           <p className="section-description">
             <T keyName="whoWeAre.subtitle">
-              Somos un equipo de más de 10 ciudadanas y ciudadanos con experiencia en informática, política, historia, economía, e IA, comprometidos con la democracia y con la visión de fortalecer la participación ciudadana.
+              Somos un equipo de más de 10 ciudadanas y ciudadanos con experiencia en informática, política, historia, economía e IA, comprometidos con la democracia y con la visión de fortalecer la participación ciudadana.
             </T>
           </p>
         </div>
