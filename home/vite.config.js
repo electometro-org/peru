@@ -1,24 +1,47 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import legacy from '@vitejs/plugin-legacy'
-import { cloudflare } from "@cloudflare/vite-plugin";
+import { cloudflare } from '@cloudflare/vite-plugin'
+import { microfrontends } from '@vercel/microfrontends/experimental/vite'
+
+// Vercel sets VERCEL=1 automatically; override locally with DEPLOY_TARGET=cloudflare|vercel
+const DEPLOY_TARGET = process.env.DEPLOY_TARGET || (process.env.VERCEL ? 'vercel' : 'cloudflare');
+
+// Per-platform config — add a new entry here to support additional providers
+const platforms = {
+  local: {
+    plugins: () => [],
+  },
+  cloudflare: {
+    plugins: () => [
+      cloudflare({
+        experimental: { headersAndRedirectsDevModeSupport: true },
+      }),
+    ],
+  },
+  vercel: {
+    plugins: () => [
+      microfrontends(),
+    ],
+  },
+};
+
+const platform = platforms[DEPLOY_TARGET];
+if (!platform) throw new Error(`Unknown DEPLOY_TARGET: "${DEPLOY_TARGET}". Valid values: ${Object.keys(platforms).join(', ')}`);
 
 export default defineConfig(({ mode }) => {
   const isDev = mode === 'development';
 
   return {
+    root: __dirname,
     plugins: [
+      ...platform.plugins(),
       react(),
       // Only use legacy plugin in production (it injects inline scripts that conflict with CSP in dev)
       !isDev && legacy({
         targets: ['Safari >= 12', 'Chrome >= 70', 'Firefox >= 68', 'Edge >= 79'],
         additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
         modernPolyfills: true,
-      }),
-      cloudflare({
-        experimental: {
-          headersAndRedirectsDevModeSupport: true,
-        },
       }),
     ].filter(Boolean),
     // Transpile modern syntax (?. ??) in dev mode for older browsers

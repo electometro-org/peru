@@ -4,12 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "DEPLOY_TARGET=cloudflare vite",
+    "dev:cloudflare": "DEPLOY_TARGET=cloudflare vite",
+    "dev:vercel": "DEPLOY_TARGET=vercel vite",
+    "dev:local": "DEPLOY_TARGET=local vite",
+    "build": "DEPLOY_TARGET=cloudflare vite build",
+    "build:cloudflare": "DEPLOY_TARGET=cloudflare vite build",
+    "build:vercel": "DEPLOY_TARGET=vercel vite build",
+    "build:local": "DEPLOY_TARGET=local vite build",
     "preview": "npm run build && wrangler dev --local-protocol https",
     "preview-qa": "CLOUDFLARE_ENV=qa npm run build && wrangler dev --local-protocol https",
     "deploy": "npm run build && wrangler deploy",
-    "deploy-qa": "CLOUDFLARE_ENV=qa npm run build && wrangler deploy"
+    "deploy-qa": "CLOUDFLARE_ENV=qa npm run build && wrangler deploy",
+    "proxy": "microfrontends proxy --local-apps peru-home"
   },
   "dependencies": {
     "@tolgee/react": "^6.2.7",
@@ -19,6 +26,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.15.2",
+    "@vercel/microfrontends": "^2.3.2",
     "@vitejs/plugin-legacy": "^6.1.1",
     "@vitejs/plugin-react": "^4.3.4",
     "terser": "^5.46.0",

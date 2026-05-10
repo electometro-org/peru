@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "decide-pe-home": {
+      "packageName": "peru-home",
+      "development": {
+        "fallback": "peru-home.vercel.app"
+      }
+    },
+    "decide-pe-electometro": {
+      "packageName": "electometro",
+      "development": {
+        "fallback": "peru-electometro.vercel.app"
+      },
+      "routing": [
+        {
+          "paths": [
+            "/electometro",
+            "/electometro/:path*"
+          ]
+        }
+      ]
+    }
+  }
+}
