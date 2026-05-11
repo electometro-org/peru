@@ -6,6 +6,78 @@ function Attributions() {
 
   const logos = [
     {
+      name: 'Spot de radio #4 y Spot de radio #6 (Composición y Mixing)',
+      fullName: 'Víctor Ludeña (@victordiscos en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@victordiscos',
+      sourceUrl: 'https://www.instagram.com/victordiscos/'
+    },
+    {
+      name: 'Spot de radio #3 (Composición y Mixing)',
+      fullName: 'Lucas Stiglich (@enficcion en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@enficcion',
+      sourceUrl: 'https://www.instagram.com/enficcion/'
+    },
+    {
+      name: 'Spot de radio #2 y Spot de radio #5 (Composición y Mixing)',
+      fullName: 'Sebastián Romero (@samcrossmusic en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@samcrossmusic',
+      sourceUrl: 'https://www.instagram.com/samcrossmusic/'
+    },
+    {
+      name: 'Spot de televisión y redes sociales (Dirección y Realización)',
+      fullName: 'Sergio Fernández (@sheso en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@shesho',
+      sourceUrl: 'https://www.instagram.com/shesho/'
+    },
+    {
+      name: 'Spot de televisión y redes sociales (Cámara y Colorización)',
+      fullName: 'Sebastían Schroth (@seb1091 en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@seb1091',
+      sourceUrl: 'https://www.instagram.com/seb1091/'
+    },
+    {
+      name: 'Spot de televisión y redes sociales (Asistencia de dirección)',
+      fullName: 'Lucía Garré (@bonito_enredo en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@bonito_enredo',
+      sourceUrl: 'https://www.instagram.com/bonito_enredo/'
+    },
+    {
+      name: 'Jingle para spots de radio (Composición y Mixing)',
+      fullName: 'Gabriel Gutierrez (@gabriel.gutierrezg en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@gabriel.gutierrezg',
+      sourceUrl: 'https://www.instagram.com/gabriel.gutierrezg/'
+    },
+    {
+      name: 'Locución (Jingle y Spots)',
+      fullName: 'Andres Magdits (@andresmagdits en Instagram)',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: '@andresmagdits',
+      sourceUrl: 'https://www.instagram.com/andresmagdits/'
+    },
+    {
+      name: 'Locución (Jingle y Spots)',
+      fullName: 'Belén Olivera',
+      license: 'CC BY-NC',
+      licenseUrl: null,
+      source: 'N/A',
+      sourceUrl: ''
+    },
+    {
       name: 'PRIN',
       fullName: 'Partido Político PRIN (Partido Regionalista de Integración Nacional)',
       license: 'CC BY-SA 4.0',
@@ -229,8 +301,10 @@ function Attributions() {
       source: 'taldiacomohoy.es',
       sourceUrl: 'https://www.taldiacomohoy.es/post/elena-izcue-1889-1970'
     },
-    
   ]
+
+  const people = logos.filter((_, i) => i <= 8)   // first 9 entries (the collaborators)
+  const assets = logos.filter((_, i) => i >= 9)    // the rest (logos, sounds, images)
 
   return (
     <section className="attributions" id="atribuciones">
@@ -239,43 +313,80 @@ function Attributions() {
           <T keyName="attributions.title">Atribuciones</T>
         </h2>
         <p className="attributions-intro">
-          <T keyName="attributions.intro">Los logos de los partidos políticos mostrados en este sitio web provienen de Wikimedia Commons y están sujetos a las siguientes licencias:</T>
+          <T keyName="attributions.intro">La elaboración de este proyecto ha sido posible gracias a la colaboración de diversos artistas, creadores de contenido y fuentes de información. A continuación, se detallan las atribuciones correspondientes a cada elemento utilizado en el sitio y en la campaña de redes sociales:</T>
         </p>
 
         <div className="attributions-grid">
-          {logos.map((logo, index) => (
-            <div key={index} className="attribution-card">
-              <h3 className="attribution-name">{logo.name}</h3>
-              <p className="attribution-full-name">{logo.fullName}</p>
+        {logos.filter((_, i) => i <= 8).map((logo, index) => (
+          <div key={index} className="attribution-card">
+            <h3 className="attribution-name">{logo.name}</h3>
+            <p className="attribution-full-name">{logo.fullName}</p>
 
-              {logo.author && (
-                <p className="attribution-author">{t('attributions.author', 'Autor')}: {logo.author}</p>
-              )}
+            {logo.author && (
+              <p className="attribution-author">{t('attributions.author', 'Autor')}: {logo.author}</p>
+            )}
 
-              <div className="attribution-license">
-                {logo.license === 'Public Domain' ? (
-                  <span><T keyName="attributions.publicDomain">Dominio Público</T></span>
-                ) : (
-                  <>
-                    {t('attributions.license', 'Licencia')}: <a href={logo.licenseUrl} target="_blank" rel="noopener noreferrer">
-                      {logo.license}
-                    </a>
-                  </>
-                )}
-              </div>
-
-              <p className="attribution-source">
-                {t('attributions.source', 'Fuente')}: <a href={logo.sourceUrl} target="_blank" rel="noopener noreferrer">
-                  {logo.source}
-                </a>
-              </p>
-
-              {logo.note && (
-                <p className="attribution-note">{logo.note}</p>
+            <div className="attribution-license">
+              {logo.license === 'Public Domain' ? (
+                <span><T keyName="attributions.publicDomain">Dominio Público</T></span>
+              ) : (
+                <>
+                  {t('attributions.license', 'Licencia')}: <a href={logo.licenseUrl} target="_blank" rel="noopener noreferrer">
+                    {logo.license}
+                  </a>
+                </>
               )}
             </div>
-          ))}
-        </div>
+
+            <p className="attribution-source">
+              {t('attributions.source', 'Fuente')}: <a href={logo.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {logo.source}
+              </a>
+            </p>
+
+            {logo.note && (
+              <p className="attribution-note">{logo.note}</p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <hr className="attributions-divider" />
+
+      <div className="attributions-grid">
+        {logos.filter((_, i) => i >= 9).map((logo, index) => (
+          <div key={index} className="attribution-card">
+            <h3 className="attribution-name">{logo.name}</h3>
+            <p className="attribution-full-name">{logo.fullName}</p>
+
+            {logo.author && (
+              <p className="attribution-author">{t('attributions.author', 'Autor')}: {logo.author}</p>
+            )}
+
+            <div className="attribution-license">
+              {logo.license === 'Public Domain' ? (
+                <span><T keyName="attributions.publicDomain">Dominio Público</T></span>
+              ) : (
+                <>
+                  {t('attributions.license', 'Licencia')}: <a href={logo.licenseUrl} target="_blank" rel="noopener noreferrer">
+                    {logo.license}
+                  </a>
+                </>
+              )}
+            </div>
+
+            <p className="attribution-source">
+              {t('attributions.source', 'Fuente')}: <a href={logo.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {logo.source}
+              </a>
+            </p>
+
+            {logo.note && (
+              <p className="attribution-note">{logo.note}</p>
+            )}
+          </div>
+        ))}
+      </div>
 
         <div className="attributions-footer">
           <p>
