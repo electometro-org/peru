@@ -92,7 +92,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.PRIVATE_LOG_REPO_TOKEN }}
         run: |
-          git clone https://x-access-token:${TOKEN}@github.com/electometro-org/deploy-logs-electometro-peru.git private-logs
+          git clone https://x-access-token:${TOKEN}@github.com/chrissummer1311/deploy-logs-electometro-peru.git private-logs
 
           mkdir -p private-logs/${{ inputs.environment }}/${{ github.run_id }}
 
