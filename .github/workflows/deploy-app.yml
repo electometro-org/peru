@@ -87,12 +87,17 @@ jobs:
           else
             VITE_ELECTION_ID=peru_2026 npm run deploy
           fi
-      - name: Inspect Wrangler logs
+      - name: Collect Wrangler logs
         if: always()
         run: |
-          pwd
-          echo "HOME=$HOME"
-          find $HOME -path "*wrangler*" -type f 2>/dev/null
+          mkdir -p deploy-logs
+
+          if [ -d "/home/runner/.config/.wrangler/logs" ]; then
+            cp -r /home/runner/.config/.wrangler/logs/* deploy-logs/ || true
+          fi
+
+          echo "Collected logs:"
+          ls -lah deploy-logs || true
       - name: Push private deploy logs
         if: always()
         env:
