@@ -87,6 +87,12 @@ jobs:
           else
             VITE_ELECTION_ID=peru_2026 npm run deploy
           fi
+      - name: Inspect Wrangler logs
+        if: always()
+        run: |
+          pwd
+          echo "HOME=$HOME"
+          find $HOME -path "*wrangler*" -type f 2>/dev/null
       - name: Push private deploy logs
         if: always()
         env:
