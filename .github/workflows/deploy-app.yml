@@ -80,6 +80,88 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           FINGERPRINT_KEY: ${{ secrets.FINGERPRINT_KEY }}
+        name: Deploy App to CF Worker
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        type: choice
+        options:
+          - qa
+          - prod
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to ${{ inputs.environment }}
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout peru (this repo)
+        uses: actions/checkout@v4
+
+      - name: Clone electometro-app
+        uses: actions/checkout@v4
+        with:
+          repository: electometro-org/app
+          path: electometro
+          token: '${{ secrets.GH_ORG_TOKEN }}'
+
+      - name: Clone cf-workers
+        uses: actions/checkout@v4
+        with:
+          repository: electometro-org/cf-workers
+          path: cf-workers
+          token: '${{ secrets.GH_ORG_TOKEN }}'
+
+      - name: Setup app directories
+        env:
+          APP_ENV_FILE: ${{ secrets.APP_ENV_FILE }}
+        run: |
+          cd electometro
+
+          # Remove existing symlinks
+          rm -f public wrangler
+
+          # Copy public assets from peru repo
+          cp -r ../app/public ./public
+          
+          # Copy i18n assets from peru repo
+          cp -r ../app/i18n ./i18n
+
+          # Copy wrangler config from cf-workers
+          cp -r ../cf-workers/peru_2026/wrangler ./wrangler
+          echo $APP_ENV_FILE | base64 --decode > .env
+
+      - name: Replace QA placeholder in _headers
+        if: inputs.environment == 'qa'
+        env:
+          QA_DOMAIN: ${{ secrets.QA_DOMAIN }}
+        run: |
+          sed -i "s/placeholder\.com/$QA_DOMAIN/g" electometro/public/static/_headers
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: electometro/package-lock.json
+
+      - name: Install dependencies
+        working-directory: electometro
+        run: npm ci
+
+      - name: Build and Deploy to Cloudflare Workers
+        working-directory: electometro
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          FINGERPRINT_KEY: ${{ secrets.FINGERPRINT_KEY }}
         run: |
           npx fpscanner build
           if [ "${{ inputs.environment }}" = "qa" ]; then
@@ -87,3 +169,21 @@ jobs:
           else
             VITE_ELECTION_ID=peru_2026 npm run deploy
           fi
+      - name: Push private deploy logs
+        if: always()
+        env:
+          TOKEN: ${{ secrets.PRIVATE_LOG_REPO_TOKEN }}
+        run: |
+          git clone https://x-access-token:${TOKEN}@github.com/electometro-org/deploy-logs-electometro-peru.git private-logs
+
+          mkdir -p private-logs/${{ inputs.environment }}/${{ github.run_id }}
+
+          cp deploy-logs/*.log private-logs/${{ inputs.environment }}/${{ github.run_id }}/
+
+          cd private-logs
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git commit -m "Deploy logs: ${{ inputs.environment }} run ${{ github.run_id }}" || exit 0
+          git push
