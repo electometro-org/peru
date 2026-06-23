@@ -68,11 +68,11 @@ function Nav() {
               <T keyName="nav.whoWeAre">Quiénes somos</T>
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#kit-de-prensa" className="nav-link" onClick={(e) => handleSectionClick(e, 'kit-de-prensa')}>
               <T keyName="nav.pressKit">Kit de prensa</T>
             </a>
-          </li>
+          </li> */}
           {/* <li className="nav-item">
             <Link to="/#colaboraciones" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               <T keyName="nav.collaborations">Colaboraciones</T>
@@ -85,6 +85,15 @@ function Nav() {
               onClick={() => setIsMenuOpen(false)}
             >
               <T keyName="nav.methodology">Metodología</T>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              href="/voluntariado"
+              className="nav-link nav-volunteer"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <T keyName="nav.volunteer">Voluntariado</T>
             </a>
           </li>
           <li className="nav-item">

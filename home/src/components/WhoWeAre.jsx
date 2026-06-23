@@ -14,8 +14,9 @@ function WhoWeAre() {
     { image: '/static/team/grios.jpeg', nameKey: 'whoWeAre.member9.name', nameDefault: 'Gabriel Ríos', roleKey: 'whoWeAre.member9.role', roleDefault: 'Desarrollador UX/UI y Creador de contenido en redes sociales' },
     { image: '/static/team/isar.jpeg', nameKey: 'whoWeAre.member10.name', nameDefault: 'Ignacio Sar Chávez', roleKey: 'whoWeAre.member10.role', roleDefault: 'Asesor de métodos' },
     { image: '/static/team/dabanto.jpeg', nameKey: 'whoWeAre.member11.name', nameDefault: 'Daniel Abanto', roleKey: 'whoWeAre.member11.role', roleDefault: 'Analista de datos y Creador de contenido en redes sociales' },
-    { image: '/static/team/mgalvez.jpeg', nameKey: 'whoWeAre.member12.name', nameDefault: 'Mariana Gálvez', roleKey: 'whoWeAre.member12.role', roleDefault: 'Imagen pública y Creadora de contenido en redes sociales' },
-    { image: '/static/team/acereceda.jpeg', nameKey: 'whoWeAre.member13.name', nameDefault: 'Ángel Cereceda', roleKey: 'whoWeAre.member13.role', roleDefault: 'Imagen pública y Creador de contenido en redes sociales' },
+    { image: '/static/team/eacosta.png', nameKey: 'whoWeAre.member12.name', nameDefault: 'Ernesto Acosta', roleKey: 'whoWeAre.member12.role', roleDefault: 'Responsable de dirección de arte' },
+    { image: '/static/team/mgalvez.jpeg', nameKey: 'whoWeAre.member13.name', nameDefault: 'Mariana Gálvez', roleKey: 'whoWeAre.member13.role', roleDefault: 'Imagen pública y Creadora de contenido en redes sociales' },
+    { image: '/static/team/acereceda.jpeg', nameKey: 'whoWeAre.member14.name', nameDefault: 'Ángel Cereceda', roleKey: 'whoWeAre.member14.role', roleDefault: 'Imagen pública y Creador de contenido en redes sociales' },
   ]
 
   return (

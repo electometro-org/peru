@@ -110,7 +110,7 @@ function Volunteering() {
 
         <button
           className="volunteering-button"
-          onClick={() => window.open('https://google.com', '_blank')}
+          onClick={() => window.open('https://forms.gle/f2zuTcydfhUSAHgZ7', '_blank')}
         >
           <T keyName="volunteering.button">
             ¡Quiero inscribirme!
