@@ -219,6 +219,19 @@
   transform: translateY(-2px);
 }
 
+.btn-volunteer {
+  background: #1a7a4a;
+  color: white;
+  box-shadow: 0 10px 30px rgba(26, 122, 74, 0.3);
+}
+
+.btn-volunteer:hover {
+  background: #15803d;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(26, 122, 74, 0.4);
+}
+
 .hero-stats {
   display: flex;
   justify-content: center;

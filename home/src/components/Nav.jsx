@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { T } from "@tolgee/react"
 import { smoothScrollTo } from '../utils/smoothScroll'
 import './Nav.css'
@@ -68,11 +68,11 @@ function Nav() {
               <T keyName="nav.whoWeAre">Quiénes somos</T>
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#kit-de-prensa" className="nav-link" onClick={(e) => handleSectionClick(e, 'kit-de-prensa')}>
               <T keyName="nav.pressKit">Kit de prensa</T>
             </a>
-          </li>
+          </li> */}
           {/* <li className="nav-item">
             <Link to="/#colaboraciones" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               <T keyName="nav.collaborations">Colaboraciones</T>

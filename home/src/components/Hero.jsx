@@ -1,4 +1,5 @@
 import { T } from "@tolgee/react"
+import { Link } from 'react-router-dom'
 import { useLoading } from './LoadingScreen'
 import './Hero.css'
 import PartyCarousel from './PartyCarousel.jsx'
@@ -66,6 +67,12 @@ function Hero() {
           >
             <T keyName="hero.cta.learnMore">Conocer Más</T>
           </a>
+          <Link
+            to="/voluntariado"
+            className="btn btn-volunteer"
+          >
+            <T keyName="hero.cta.volunteer">Voluntariado</T>
+          </Link>
         </div>
         <div className={`hero-stats ${isReady ? 'animate' : ''}`}>
           <div className="stat">

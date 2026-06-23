@@ -34,6 +34,7 @@ function HomeWithRedirect() {
   return <Home />
 }
 import AttributionsPage from './pages/AttributionsPage.jsx'
+import VolunteeringPage from './pages/VolunteeringPage.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/atribuciones" element={<AttributionsPage />} />
+            <Route path="/voluntariado" element={<VolunteeringPage />} />
             <Route path="*" element={<HomeWithRedirect />} />
           </Routes>
           <Footer />
