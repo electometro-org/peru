@@ -1,5 +1,4 @@
 import { T } from "@tolgee/react"
-import { useRef } from 'react'
 import { useLoading } from './LoadingScreen'
 import './Hero.css'
 import PartyCarousel from './PartyCarousel.jsx'
@@ -13,7 +12,6 @@ function Hero() {
   const currentLanguage = tolgee.getLanguage() || tolgee.getInitialOptions().defaultLanguage
   const availableLanguages = tolgee.getAvailableLanguages?.() || []
   const otherLanguages = availableLanguages.filter((language) => language !== currentLanguage)
-  const hasTriggeredLanguageFetch = useRef(false)
 
   return (
     <section className="hero" id="hero">
