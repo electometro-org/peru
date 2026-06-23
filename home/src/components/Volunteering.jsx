@@ -100,7 +100,15 @@ function Volunteering() {
         <p className="volunteering-text">
           <T keyName="volunteering.text">
             Somos una iniciativa ciudadana, apartidaria y sin fines de lucro que busca
-            ayudar a los/as peruanos/as a votar de manera más informada. Para lograrlo, te necesitamos. 
+            ayudar a los/as peruanos/as a votar de manera más informada. Para lograrlo,
+          </T>{' '}
+          <span className="volunteering-cta-highlight">
+            <T keyName="volunteering.cta">¡te necesitamos!</T>
+          </span>.
+        </p>
+
+        <p className="volunteering-text">
+          <T keyName="volunteering.text2">
             Estamos buscando escolares (de secundaria), estudiantes universitarios y profesionales con interés
             en la política que quieran ayudarnos a monitorear declaraciones,
             propuestas y posiciones de candidatos/as regionales y municipales. No necesitas experiencia

@@ -24,6 +24,17 @@
   margin: 0 auto 2.5rem;
 }
 
+.volunteering-cta-highlight {
+  color: var(--text-dark);
+  font-weight: 700;
+  /* thick red underline that sits a little below the text */
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
 .volunteering-button {
   display: inline-block;
   background: var(--primary-color);
@@ -112,7 +123,7 @@
 }
 
 .volunteering-eyebrow {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
