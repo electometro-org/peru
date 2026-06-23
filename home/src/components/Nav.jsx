@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { T } from "@tolgee/react"
 import { smoothScrollTo } from '../utils/smoothScroll'
 import './Nav.css'
@@ -85,15 +85,6 @@ function Nav() {
               onClick={() => setIsMenuOpen(false)}
             >
               <T keyName="nav.methodology">Metodología</T>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="/voluntariado"
-              className="nav-link nav-volunteer"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <T keyName="nav.volunteer">Voluntariado</T>
             </a>
           </li>
           <li className="nav-item">
