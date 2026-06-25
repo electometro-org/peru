@@ -10,6 +10,11 @@ on:
         options:
           - qa
           - prod
+      app_branch:
+        description: 'Branch of electometro-org/app to deploy'
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -27,6 +32,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: electometro-org/app
+          ref: ${{ inputs.app_branch }}
           path: electometro
           token: '${{ secrets.GH_ORG_TOKEN }}'
 
