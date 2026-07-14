@@ -33,7 +33,7 @@
       "description": "Visualiza tu afinidad con cada partido y compara tus respuestas con sus posiciones.",
       "title": "Resultados Detallados"
     },
-    "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar. Te ayudamos a ordenar tus prioridades políticas y ver qué partidos y candidatos las tienen por delante.",
+    "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar, te ayudamos a ordenar tus prioridades y ver cuáles candidaturas las representan.",
     "title": "¿Qué es el Electómetro?"
   },
   "footer": {
@@ -60,9 +60,9 @@
       "start": "Empezar"
     },
     "stats": {
-      "candidates": "Candidatos",
-      "necessary": "Necesario",
-      "questions": "Preguntas"
+      "candidates": "Preguntas",
+      "necessary": "Candidatos",
+      "questions": "Minutos"
     },
     "title": {
       "discover": "Decide informado",

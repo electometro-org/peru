@@ -15,7 +15,7 @@ function Home() {
       <WhoWeAre />
       <Collaborations />
       <PressKit />
-      <CtaSection />
+      {/* <CtaSection /> */}
     </>
   )
 }

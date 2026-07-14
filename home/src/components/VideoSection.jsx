@@ -5,14 +5,6 @@ function VideoSection() {
   return (
     <section className="video-section" id="video">
       <div className="video-container">
-        {/* <div className="video-header"> */}
-          {/* <h2 className="section-title">
-            <T keyName="video.title">Video promocional</T>
-          </h2> */}
-          {/* <p className="section-description">
-            <T keyName="video.subtitle">Mira este breve video para entender cómo usar la herramienta</T>
-          </p> */}
-        {/* </div> */}
         <div className="video-wrapper">
           <iframe 
           width="560" height="315" 

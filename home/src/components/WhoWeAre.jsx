@@ -28,17 +28,17 @@ function WhoWeAre() {
           </h2>
           <p className="section-description">
             <T keyName="whoWeAre.subtitle">
-              Somos un equipo de más de 10 ciudadanas y ciudadanos con experiencia en informática, política, historia, economía e IA, comprometidos con la democracia y con la visión de fortalecer la participación ciudadana.
+              Somos un equipo de más de 10 ciudadanos/as comprometidos con la democracia y con la visión de fortalecer la participación electoral. Garantizamos total independencia y transparencia a través de nuestro código abierto y auditorías externas. El Electómetro es una plataforma informativa e independiente. No es financiada por ningún partido político, institución publica o privados.
             </T>
           </p>
         </div>
 
         <div className="who-we-are-body">
-          <p className="who-we-are-description">
+          {/* <p className="who-we-are-description">
             <T keyName="whoWeAre.description">
-              Garantizamos total independencia y transparencia a través de nuestro código abierto (en proceso) y auditorías externas. El Electómetro es una plataforma informativa e independiente. No es financiada por ningún partido político, institución pública o privados.
+              
             </T>
-          </p>
+          </p> */}
 
           <div className="who-we-are-team">
             {members.map((member, index) => (

@@ -121,6 +121,9 @@
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
 }
 
 @media (max-width: 768px) {

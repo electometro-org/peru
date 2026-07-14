@@ -64,6 +64,10 @@
   border: 3px solid rgba(217, 16, 35, 0.2);
 }
 
+.section-description {
+  text-align: justify;
+}
+
 .team-name {
   font-size: 1.2rem;
   font-weight: 600;

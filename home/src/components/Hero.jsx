@@ -17,10 +17,10 @@ function Hero() {
   return (
     <section className="hero" id="hero">
       <div className="hero-content">
-        <div className={`hero-badge ${isReady ? 'animate' : ''}`}>
+        {/* <div className={`hero-badge ${isReady ? 'animate' : ''}`}>
           <span>🗳️ <T keyName="hero.badge">Elecciones 2026</T></span>
-        </div>
-        {otherLanguages.length > 0 && (
+        </div> */}
+        {/* {otherLanguages.length > 0 && (
           <div className={`hero-languages ${isReady ? 'animate' : ''}`}>
             <span className="hero-languages-label">
               <T keyName="hero.languages.label">También en</T>
@@ -36,7 +36,7 @@ function Hero() {
               ))}
             </span>
           </div>
-        )}
+        )} */}
         <h1 className="hero-title">
           <span className="title-discover">
             <LanguageCurtain className="lang-curtain--hero-discover">
@@ -44,7 +44,6 @@ function Hero() {
             </LanguageCurtain>
           </span>
           <br />
-          <PartyCarousel />
           <LanguageCurtain className="title-who-represents">
             <span className="title-who">
               <T keyName="hero.title.who" language={cycleLanguage}>quién</T>
@@ -61,12 +60,12 @@ function Hero() {
           >
             <T keyName="hero.cta.start">Empezar</T>
           </a>
-          <a
+          {/* <a
             href="#caracteristicas"
             className="btn btn-secondary"
           >
             <T keyName="hero.cta.learnMore">Conocer Más</T>
-          </a>
+          </a> */}
           <Link
             to="/voluntariado"
             className="btn btn-volunteer"
@@ -77,7 +76,7 @@ function Hero() {
         <div className={`hero-stats ${isReady ? 'animate' : ''}`}>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.questions_nr">20</T>
+              <T keyName="hero.stats.questions_nr">5</T>
             </div>
             <div className="stat-label">
               <T keyName="hero.stats.questions">Preguntas</T>
@@ -85,21 +84,22 @@ function Hero() {
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.candidates_nr">30+</T>
+              <T keyName="hero.stats.candidates_nr">20</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.candidates">Candidatos</T>
+              <T keyName="hero.stats.candidates">Preguntas</T>
             </div>
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.necessary_nr">100%</T>
+              <T keyName="hero.stats.necessary_nr">30+</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.necessary">Necesario</T>
+              <T keyName="hero.stats.necessary">Candidatos</T>
             </div>
           </div>
         </div>
+        <PartyCarousel />
       </div>
     </section>
   )
