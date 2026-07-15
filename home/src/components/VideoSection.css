@@ -1,5 +1,5 @@
 .video-section {
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   margin-left: -1rem;
   margin-right: -1rem;
 }
@@ -11,8 +11,9 @@
 }
 
 .video-container {
-  max-width: 900px;
+  max-width: 640px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .video-header {

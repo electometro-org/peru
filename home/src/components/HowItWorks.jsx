@@ -40,9 +40,6 @@ function HowItWorks() {
           <h2 className="section-title">
             <T keyName="howItWorks.title">¿Cómo Funciona?</T>
           </h2>
-          <p className="section-description">
-            <T keyName="howItWorks.subtitle">En solo 4 pasos simples, encuentra el partido que mejor representa tus valores</T>
-          </p>
         </div>
         <div className="steps-container">
           {steps.map((step, index) => (

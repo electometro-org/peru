@@ -1,6 +1,6 @@
 .who-we-are {
   padding: 3rem 2rem;
-  background: #ffffff;
+  background: var(--lighter-bg);
 }
 
 .who-we-are-container {
@@ -10,7 +10,7 @@
 
 .who-we-are-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .who-we-are-body {
@@ -38,7 +38,7 @@
 
 .team-card {
   text-align: center;
-  padding: 2.5rem 1.5rem;
+  padding: 1rem 0rem;
   border-radius: 16px;
   border: 1px solid rgba(217, 16, 35, 0.15);
   background: var(--lighter-bg);
@@ -72,17 +72,18 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0rem;
 }
 
 .team-role {
   font-size: 0.95rem;
   color: var(--text-gray);
+  margin-bottom: 0rem;
 }
 
 @media (max-width: 768px) {
   .who-we-are {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
   .who-we-are-team {
     flex-direction: column;

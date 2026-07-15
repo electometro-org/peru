@@ -10,30 +10,30 @@
   },
   "features": {
     "accessible": {
-      "description": "Funciona perfectamente en computadora, tablet o móvil. Usa cuando quieras, donde quieras.",
-      "title": "Accesible en Cualquier Dispositivo"
+      "description": "Funciona perfectamente en computadora, tablet o móvil. Úsalo cuando quieras y cómo quieras.",
+      "title": "Accesible desde cualquier dispositivo"
     },
     "fast": {
-      "description": "Completa el cuestionario en menos de 5 minutos y obtén resultados instantáneos. Listo!",
-      "title": "Rápido y Fácil"
+      "description": "Completa el cuestionario en menos de 5 minutos y obtén resultados instantáneos. ¡Listo!",
+      "title": "Rápido y fácil"
     },
     "matching": {
-      "description": "Nuestro algoritmo compara tus respuestas con los planes de los partidos políticos. Así calculamos con qué candidatos haces \"match\"",
+      "description": "Nuestro algoritmo compara tus respuestas con los planes de gobierno, declaraciones y entrevistas de las candidaturas y sus partidos políticos.",
       "title": "Así funciona "
     },
     "objective": {
       "description": "Metodología transparente basada en propuestas y posiciones públicas de los partidos.",
-      "title": "Objetivo"
+      "title": "Transparencia y objetividad"
     },
     "privacy": {
-      "description": "No guardamos tus datos personales. Tampoco compartimos información con políticos o privados.",
+      "description": "No guardamos tus datos personales. Tampoco compartimos información con partidos políticos o privados.",
       "title": "Protegemos tus datos"
     },
     "results": {
-      "description": "Visualiza tu afinidad con cada partido y compara tus respuestas con sus posiciones.",
-      "title": "Resultados Detallados"
+      "description": "Visualiza tu afinidad con cada partido y compara tus respuestas con sus posiciones individuales y/o partidarias.",
+      "title": "Resultados detallados"
     },
-    "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar, te ayudamos a ordenar tus prioridades y ver cuáles candidaturas las representan.",
+    "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar: te ayudamos a ordenar tus prioridades y ver cuáles candidaturas las representan.",
     "title": "¿Qué es el Electómetro?"
   },
   "footer": {
@@ -77,20 +77,20 @@
       "title": "¿Listo para empezar?"
     },
     "step1": {
-      "description": "Indica si estás a favor, neutral o en contra de diferentes casos políticos. Puedes saltar preguntas si no estás seguro.",
+      "description": "Indica si estás a favor, neutral o en contra de diferentes tesis políticas. Sáltalas si no estás seguro.",
       "title": "Responde las preguntas"
     },
     "step2": {
-      "description": "Nuestro algoritmo compara tus respuestas con las posiciones de todos los partidos políticos.",
-      "title": "Analiza tu Perfil"
+      "description": "Nuestro algoritmo compara tus respuestas con las posiciones de todas las candidaturas.",
+      "title": "Analiza tu perfil"
     },
     "step3": {
-      "description": "Visualiza qué partidos se alinean mejor con tus ideas y conoce las diferencias clave.",
-      "title": "Descubre tu Compatibilidad"
+      "description": "Visualiza qué partidos y candidatos/as se alinean mejor con tus ideas y conoce las diferencias clave.",
+      "title": "Descubre tu compatibilidad"
     },
     "step4": {
       "description": "Usa esta información como guía para tomar una decisión electoral más consciente y fundamentada.",
-      "title": "Decide Informado"
+      "title": "Decide informado"
     },
     "subtitle": "En solo 5 pasos, encuentra el partido y candidato que mejor representa tus valores",
     "title": "¿Cómo funciona?"

@@ -7,7 +7,7 @@ function VideoSection() {
       <div className="video-container">
         <div className="video-wrapper">
           <iframe 
-          width="560" height="315" 
+          width="420" height="236" 
           src="https://www.youtube.com/embed/9lctWHsdpi0?si=HnJmOAKAAkyFi48o" 
           title="YouTube video player" 
           frameborder="0" 

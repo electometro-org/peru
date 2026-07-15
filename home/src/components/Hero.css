@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  padding-top: 80px;
+  padding-top: 110px;
   box-sizing: border-box;
   background: linear-gradient(360deg, #fff 0%, #dfcfcf 100%);
   position: relative;
@@ -171,8 +171,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
@@ -354,7 +354,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: #FF1744;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.05rem;
 }
 
 .stat-label {

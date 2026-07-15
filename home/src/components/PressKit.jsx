@@ -26,11 +26,13 @@ function PressKit() {
         <div className="press-kit-grid">
           {resources.map((resource, index) => (
             <div key={index} className="press-card">
-              <div className="press-card-icon">{resource.icon}</div>
-              <div className="press-card-content">
+              <div className="press-card-header">
+                <span className="press-card-icon">{resource.icon}</span>
                 <h3 className="press-card-name">
                   <T keyName={resource.nameKey}>{resource.nameDefault}</T>
                 </h3>
+              </div>
+              <div className="press-card-content">
                 <p className="press-card-desc">
                   <T keyName={resource.descKey}>{resource.descDefault}</T>
                 </p>

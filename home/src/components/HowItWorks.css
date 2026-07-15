@@ -10,24 +10,26 @@
 
 .how-it-works-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .steps-container {
   display: flex;
   flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .steps-container > * + * {
-  margin-top: 3rem;
+  margin-top: 1.25rem;
 }
 
 .step {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 2rem;
+  grid-template-columns: 65px 1fr;
+  gap: 0.5rem;
   position: relative;
-  padding: 2rem;
+  padding: 1rem 1rem;
   background: #f8f9fa;
   border-radius: 16px;
   border: 1px solid rgba(217, 16, 35, 0.15);
@@ -42,13 +44,16 @@
 }
 
 .step-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, #D91023 0%, #FF3B4F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-content {
@@ -60,7 +65,7 @@
 .step-title {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
   color: var(--text-dark);
 }
 
@@ -97,4 +102,3 @@
     font-size: 1.5rem;
   }
 }
-
