@@ -4,28 +4,28 @@ import './HowItWorks.css'
 function HowItWorks() {
   const steps = [
     {
-      number: '01',
+      number: '1',
       titleKey: 'howItWorks.step1.title',
       titleDefault: 'Responde las Preguntas',
       descKey: 'howItWorks.step1.description',
       descDefault: 'Contesta un cuestionario sobre temas políticos importantes. Puedes saltar preguntas si no estás seguro.'
     },
     {
-      number: '02',
+      number: '2',
       titleKey: 'howItWorks.step2.title',
       titleDefault: 'Analiza tu Perfil',
       descKey: 'howItWorks.step2.description',
       descDefault: 'Nuestro algoritmo compara tus respuestas con las posiciones de todos los partidos políticos.'
     },
     {
-      number: '03',
+      number: '3',
       titleKey: 'howItWorks.step3.title',
       titleDefault: 'Descubre tu Compatibilidad',
       descKey: 'howItWorks.step3.description',
       descDefault: 'Visualiza qué partidos se alinean mejor con tus ideas y conoce las diferencias clave.'
     },
     {
-      number: '04',
+      number: '4',
       titleKey: 'howItWorks.step4.title',
       titleDefault: 'Decide Informado',
       descKey: 'howItWorks.step4.description',
