@@ -50,7 +50,7 @@ jobs:
           cd electometro
 
           # Remove existing symlinks
-          rm -f public wrangler
+          rm -f public wrangler i18n
 
           # Copy public assets from peru repo
           cp -r ../app/public ./public
