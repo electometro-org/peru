@@ -6,7 +6,7 @@ function WhoWeAre() {
     { image: '/static/team/elazo.jpeg', nameKey: 'whoWeAre.member1.name', nameDefault: 'Esteban Lazo', roleKey: 'whoWeAre.member1.role', roleDefault: 'Director del proyecto (elazo@decide.pe)' },
     { image: '/static/team/jvalqui.jpeg', nameKey: 'whoWeAre.member2.name', nameDefault: 'José Valqui', roleKey: 'whoWeAre.member2.role', roleDefault: 'Responsable de investigación (jvalqui@decide.pe)' },
     { image: '/static/team/nleon.webp', nameKey: 'whoWeAre.member3.name', nameDefault: 'Nicolás León', roleKey: 'whoWeAre.member3.role', roleDefault: 'Responsable de comunicaciones (nleon@decide.pe)' },
-    { image: '/static/team/fsaba.jpeg', nameKey: 'whoWeAre.member8.name', nameDefault: 'Fernando Saba', roleKey: 'whoWeAre.member8.role', roleDefault: 'Responsable de desarollo web (fsaba@decide.pe)' },
+    { image: '/static/team/fsaba.jpeg', nameKey: 'whoWeAre.member8.name', nameDefault: 'Fernando Saba', roleKey: 'whoWeAre.member8.role', roleDefault: 'Responsable de infraestructura web (fsaba@decide.pe)' },
     { image: '/static/team/sfernandez.jpeg', nameKey: 'whoWeAre.member4.name', nameDefault: 'Sebastián Fernández', roleKey: 'whoWeAre.member4.role', roleDefault: 'Responsable de redes sociales' },
     { image: '/static/team/asasieta.jpeg', nameKey: 'whoWeAre.member6.name', nameDefault: 'Ariana Sasieta', roleKey: 'whoWeAre.member6.role', roleDefault: 'Responsable de alianzas y comunicación institucional' },
     { image: '/static/team/sgaitan.jpeg', nameKey: 'whoWeAre.member7.name', nameDefault: 'Sophia Gaitán', roleKey: 'whoWeAre.member7.role', roleDefault: 'Responsable de alianzas e imagen pública' },
