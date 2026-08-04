@@ -107,7 +107,7 @@ jobs:
       - name: Push private deploy logs
         if: always()
         env:
-          TOKEN: ${{ secrets.PRIVATE_LOG_REPO_TOKEN }}
+          TOKEN: ${{ secrets.GH_ORG_TOKEN }}
         run: |
           git clone https://x-access-token:${TOKEN}@github.com/electometro-org/deploy-logs-peru.git private-logs
 
