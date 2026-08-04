@@ -63,10 +63,12 @@ function Features() {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
-              <h3 className="feature-title">
-                <T keyName={feature.titleKey}>{feature.titleDefault}</T>
-              </h3>
+              <div className="feature-header">
+                <span className="feature-icon">{feature.icon}</span>
+                <h3 className="feature-title">
+                  <T keyName={feature.titleKey}>{feature.titleDefault}</T>
+                </h3>
+              </div>
               <p className="feature-description">
                 <T keyName={feature.descKey}>{feature.descDefault}</T>
               </p>
