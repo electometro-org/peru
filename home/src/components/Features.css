@@ -26,7 +26,7 @@
   color: var(--text-dark);
 }
 
-.section-description {
+p.section-description {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: var(--text-gray);
   max-width: 900px;   /* was 600px */

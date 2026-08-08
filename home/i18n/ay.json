@@ -10,31 +10,31 @@
   },
   "features": {
     "accessible": {
-      "description": "Computadora, tablet ukhamaraki celular ukanakan walikiwa. Munksña chiqan apnaqam.",
-      "title": "Maynïr Dispositivonakataki"
+      "description": "Jiskt'awinaka computadora, tablet jan ukax celularamatwa kutt'ayasma, kawkhankasasa.",
+      "title": "Kawkir dispositivosatasa"
     },
     "fast": {
-      "description": "5 minutonakan qillqañaniwa, juk’amp jank’akiwa. Listo!",
-      "title": "Jank’a ukhamaraki Suma"
+      "description": "Jiskt'awinaka niya phisqa minutunakan phuqachma, ukat kutt'ayatanakamax mäkipan uñt'asma.",
+      "title": "Jank'aki ukat jasaki"
     },
     "matching": {
-      "description": "Algoritmoyku kutichatunakaru partido político plananakampi uñt’ayi. Uka tuqitaw candidatunakampi sum uñt’aya.",
-      "title": "Uka tuqit qhanst’ayi"
+      "description": "Electómetrox kutt'ayatanakamarux candidaturanakana ukatakanakan partidopan propuestas, arsutapa ukat taqpachana uñt'ayata entrevistas ukanakamp chikachayi.",
+      "title": "Amuyunakam chikachayaña"
     },
     "objective": {
-      "description": "Qhanakïri metodología, propuesta ukhamaraki público postura ukanakampi.",
-      "title": "Ch’amanchawi"
+      "description": "Partidunakan propuestas ukat taqpachana uñt'ayata posiciones ukanakarjam lurata qhana metodología.",
+      "title": "Qhana metodología"
     },
     "privacy": {
-      "description": "Janikaw datos personales wakicht’apkiti. Janiw político ni jaqinakampi jach’añchaskiti.",
-      "title": "Datos uñt’awi"
+      "description": "Jumanakan personales datosanakax janiw imatäkiti, ni kutt'ayatanakamsa partidunakarusa yaqha jaqinakarusa janiw churatäkiti.",
+      "title": "Datosanakam jark'aqapxtwa"
     },
     "results": {
-      "description": "Sapa partidompix afinidad uñjaña ukhamaraki kutichatunakamp ch’axwa.",
-      "title": "Detalle Resultados"
+      "description": "Sapa partidumpix qawqha amuyunakamax chikachasi uk uñjam, ukat kutt'ayatanakamarux sapa mayni ukat partidunakan posiciones ukanakamp chikachayam.",
+      "title": "Sum uñjañ resultados"
     },
-    "subtitle": "Yatiñamp ch’amanchaña. Janiw piman votañam axsaskiti. Sapa partidomp yatiñam yanapt’asi.",
-    "title": "¿Kunjam Electómetro?"
+    "subtitle": "Yatiñampi ukat qhanampi yanapt'awi, yatiñampi amtañataki. Janiw khitiru votañamatakix siskäti: amuyunakam suma wakicht'asiñataki ukat khitinakax ukanakamp chikachasi uk uñt'añatakiw yanapt'apxsma.",
+    "title": "¿Kunas Electómetro?"
   },
   "footer": {
     "about": {

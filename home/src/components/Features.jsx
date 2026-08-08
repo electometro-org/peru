@@ -53,7 +53,7 @@ function Features() {
       <div className="features-container">
         <div className="features-header">
           <h2 className="section-title">
-            <T keyName="features.title">¿Por qué usar el Electómetro?</T>
+            <T keyName="features.title">¿Qué es el electómetro?</T>
           </h2>
           <p className="section-description">
             <T keyName="features.subtitle">Una herramienta confiable y transparente para tomar decisiones informadas</T>

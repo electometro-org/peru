@@ -10,23 +10,23 @@
   },
   "features": {
     "accessible": {
-      "description": "Funciona perfectamente en computadora, tablet o móvil. Úsalo cuando quieras y cómo quieras.",
-      "title": "Accesible desde cualquier dispositivo"
+      "description": "Puedes responder el cuestionario desde tu computadora, tablet o celular, estés donde estés.",
+      "title": "Desde cualquier dispositivo"
     },
     "fast": {
-      "description": "Completa el cuestionario en menos de 5 minutos y obtén resultados instantáneos. ¡Listo!",
-      "title": "Rápido y fácil"
+      "description": "Completa el cuestionario en aproximadamente 5 minutos y conoce tus resultados al instante.",
+      "title": "Rápido y sencillo"
     },
     "matching": {
-      "description": "Nuestro algoritmo compara tus respuestas con los planes de gobierno, declaraciones y entrevistas de las candidaturas y sus partidos políticos.",
-      "title": "Así funciona "
+      "description": "El Electómetro compara tus respuestas con las propuestas, declaraciones y entrevistas públicas de las candidaturas y sus partidos políticos.",
+      "title": "Compara tus ideas"
     },
     "objective": {
       "description": "Metodología transparente basada en propuestas y posiciones públicas de los partidos.",
       "title": "Transparencia y objetividad"
     },
     "privacy": {
-      "description": "No guardamos tus datos personales. Tampoco compartimos información con partidos políticos o privados.",
+      "description": "No guardamos tus datos personales ni compartimos tus respuestas con partidos políticos o terceros.",
       "title": "Protegemos tus datos"
     },
     "results": {

@@ -10,31 +10,31 @@
   },
   "features": {
     "accessible": {
-      "description": "Computadorakunapi, tabletakunapi otaq celularkunapipas allintan llank’an. Maypachachus munasqaykipi, maypi munasqaykipipas llamk’achiy.",
-      "title": "Ima Dispositivopipas yaykuy atiy"
+      "description": "Tapuykunata kutichiyta atinki computadora, tablet utaq celularniykimanta, maypi kaspapas.",
+      "title": "Mayqin dispositivomantapas"
     },
     "fast": {
-      "description": "Manaraq 5 minutollapi tapukuy qillqata hunt’achiy hinaspa chaylla resultadokunata tariy. Ñam!",
-      "title": "Utqaylla hinaspa Facil"
+      "description": "Tapuykunata pichqa minutukuna hina hunt'ay hinaspa kutichisqaykita chaylla riqsiy.",
+      "title": "Utqaylla hinaspa sasa mana"
     },
     "matching": {
-      "description": "Algoritmoyku kutichiyniykikunata partido políticokunap plataformankunawan tupachin. Kayhinatam yupayku mayqin candidatokunawan \"tunchasqa\" kasqaykita.",
-      "title": "Kaynatam llamkan"
+      "description": "Electómetroqa kutichisqaykita candidaturakunapa hinaspa paykunapa partidokunapa propuesta, willakuy hinaspa entrevista pública-kunawan tupachin.",
+      "title": "Yuyaynikikunata tupachiy"
     },
     "objective": {
-      "description": "Metodología transparente nisqa, propuesta nisqakunapi, hinallataq posición pública nisqapipas, chay partidokunaq.",
-      "title": "Chayana"
+      "description": "Partidokunapa propuesta hinaspa público posiciónninkunapi sayasqa, sut'i metodología.",
+      "title": "Sut'i metodología"
     },
     "privacy": {
-      "description": "Mana sapalla willayniykimanta waqaychaykuchu. Chaymantapas manam willakuykunataqa willanakuykuchu politicokunawan nitaq sapan runakunawanpas.",
-      "title": "Datosniykikunata waqaychayku"
+      "description": "Personal datoykitaqa manam waqaychanchikchu, nitaq kutichisqaykita partidokunaman utaq huk kikinakunaman rakisunchikchu.",
+      "title": "Datosniykitaqa waqaychayku"
     },
     "results": {
-      "description": "Sapa partidowan afinidadniykita qawariy hinaspa kutichiyniykikunata tupachiy posiciónninkuwan.",
-      "title": "Detallada Resultados"
+      "description": "Sapa partidowan qanpa yuyaynikikunapa tinkisqanta rikuy hinaspa kutichisqaykita paykunapa posición individual hinaspa partidaria-kunawan tupachiy.",
+      "title": "Allin qhawarina resultados"
     },
-    "subtitle": "Allin yachaywan tanteanapaq confiable hinaspa chuya yanapakuy. Manam niykuchu piman votanaykipaq. Yanapaykiku intereses políticos nisqaykikunata ñawpaqman churanaykipaq hinaspa qawanaykipaq mayqin partidokuna hinaspa candidatokuna ñawpaqnikipi kasqankuta.",
-    "title": "¿Imataq Electrómetro nisqa?"
+    "subtitle": "Yachasqa hinaspa sut'i yanapakuy, yuyaywan decisiónkunata ruranapaq. Manam pipaq votanaykipaq nisunchikchu: ñawpaqman yuyaynikikunata churaypi hinaspa pikunachus chaykunata representanku chayta riqsinapi yanapasuyku.",
+    "title": "¿Imataq Electómetro?"
   },
   "footer": {
     "about": {
