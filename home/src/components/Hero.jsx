@@ -53,12 +53,19 @@ function Hero() {
             </span>
           </LanguageCurtain>
         </h1>
+        <p className="hero-description">
+          <T keyName="hero.description">
+            Descubre qué candidatos se
+            acercan más a tus ideas. El Electómetro te ayuda a
+            comparar, pero la decisión es tuya.
+          </T>
+        </p>
         <div className="hero-cta">
           <a
             href={import.meta.env.VITE_ELECTOMETRO_URL}
             className="btn btn-primary"
           >
-            <T keyName="hero.cta.start">Empezar</T>
+            <T keyName="hero.cta.start">Empezar el Electrometro</T>
           </a>
           {/* <a
             href="#caracteristicas"
@@ -79,7 +86,7 @@ function Hero() {
               <T keyName="hero.stats.questions_nr">5</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.questions">Preguntas</T>
+              <T keyName="hero.stats.necessary">Minutos</T>
             </div>
           </div>
           <div className="stat">
@@ -87,7 +94,7 @@ function Hero() {
               <T keyName="hero.stats.candidates_nr">20</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.candidates">Preguntas</T>
+              <T keyName="hero.stats.questions">Preguntas</T>
             </div>
           </div>
           <div className="stat">
@@ -95,11 +102,21 @@ function Hero() {
               <T keyName="hero.stats.necessary_nr">30+</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.necessary">Candidatos</T>
+              <T keyName="hero.stats.candidates">Candidatos</T>
             </div>
           </div>
         </div>
-        <PartyCarousel />
+        <div className="hero-parties">
+          <p className="hero-parties-description">
+            <T keyName="hero.parties.description">
+                Comparamos tus respuestas con las posiciones
+                públicas de estos partidos políticos:
+              </T>
+          </p>
+
+          <PartyCarousel />
+
+        </div>
       </div>
     </section>
   )

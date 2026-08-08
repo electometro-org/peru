@@ -54,20 +54,25 @@
     }
   },
   "hero": {
-    "badge": "Akllanakuykuna 2026 watapi",
+    "badge": "2026 ajllawinaka",
     "cta": {
-      "learnMore": "Astawan yachay",
-      "start": "Qallariy"
+      "learnMore": "Juk'amp yatiña",
+      "start": "Electómetro qalltaña",
+      "volunteer": "Yanapt'irjam mayacht'asiña"
     },
     "stats": {
-      "candidates": "Candidatos nisqakuna",
-      "necessary": "Manakusqa",
-      "questions": "Tapukuykuna"
+      "candidates": "Ajllirinaka",
+      "necessary": "Minutunaka",
+      "questions": "Jiskt'awinaka"
     },
     "title": {
-      "discover": "Allin yuyaywan decidiy.",
-      "represents": "5 minutu",
-      "who": "in"
+      "discover": "Yatiñampi ajlli",
+      "represents": "5 minutunakana",
+      "who": "khitisa"
+    },
+    "description": "Amuyunakamamp juk'amp jak'ankir ajllirinaka uñt'am. Electómetrox amuyunakamarjam yäqañ yanapt'am, ukampis jumaw ajllïta.",
+    "parties": {
+      "description": "Jiskt'awinakamar kutt'ayatanakax aka partido político-nakan qhanañchata amuyunakapamp chikachapxtwa:"
     }
   },
   "howItWorks": {

@@ -13,7 +13,10 @@
   background: linear-gradient(360deg, #fff 0%, #dfcfcf 100%);
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
+
+
 /* TODO: Add more padding in cellular devices */
 
 .hero::before {
@@ -164,7 +167,21 @@
   line-height: 1.6;
   padding: 0 1rem;
   box-sizing: border-box;
-  text-align: justify;
+  text-align: center;
+}
+.hero-parties {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+
+}
+
+.hero-parties-description{
+  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+  color: #2a4155;
 }
 
 .hero-cta {
