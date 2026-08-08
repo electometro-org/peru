@@ -93,4 +93,8 @@ p.section-description {
   .features-grid {
     grid-template-columns: 1fr;
   }
+
+  p.section-description {
+  font-size: 1rem;
+}
 }

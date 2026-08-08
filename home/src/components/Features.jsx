@@ -56,7 +56,7 @@ function Features() {
             <T keyName="features.title">¿Qué es el electómetro?</T>
           </h2>
           <p className="section-description">
-            <T keyName="features.subtitle">Una herramienta confiable y transparente para tomar decisiones informadas</T>
+            <T keyName="features.subtitle">Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar: te ayudamos a ordenar tus prioridades y ver quiénes las representan.</T>
           </p>
         </div>
         <VideoSection />
