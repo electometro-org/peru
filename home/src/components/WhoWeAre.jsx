@@ -28,7 +28,7 @@ function WhoWeAre() {
           </h2>
           <p className="section-description">
             <T keyName="whoWeAre.subtitle">
-              Somos un equipo de más de 10 ciudadanos/as comprometidos con la democracia y con la visión de fortalecer la participación electoral. Garantizamos total independencia y transparencia a través de nuestro código abierto y auditorías externas. El Electómetro es una plataforma informativa e independiente. No es financiada por ningún partido político, institución publica o privados.
+              Somos un equipo de ciudadanos comprometidos con la democracia y el fortalecimiento de la participación cívica. Reunimos conocimientos de distintas disciplinas para hacer que la información electoral sea más accesible y ayudarte a tomar decisiones informadas.
             </T>
           </p>
         </div>
