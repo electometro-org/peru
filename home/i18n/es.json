@@ -104,5 +104,9 @@
     "features": "Qué es",
     "howItWorks": "Cómo funciona",
     "start": "Empezar"
+  },
+  "whoWeAre": {
+    "subtitle": "Somos un equipo de ciudadanos comprometidos con la democracia y el fortalecimiento de la participación cívica. Reunimos conocimientos de distintas disciplinas para hacer que la información electoral sea más accesible y ayudarte a tomar decisiones informadas.",
+    "title": "¿Quiénes somos?"
   }
 }
