@@ -11,6 +11,14 @@ on:
         options:
           - 'yes'
           - 'no'
+      election_id:
+        description: 'Election to build and deploy (VITE_ELECTION_ID)'
+        required: true
+        type: choice
+        default: 'peru_2026'
+        options:
+          - peru_2026
+          - peru_regional_2026
 
 permissions:
   contents: write
@@ -63,7 +71,8 @@ jobs:
           echo "Triggering app deployment to production..."
           gh workflow run deploy-app.yml \
             --repo electometro-org/peru \
-            --field environment=prod
+            --field environment=prod \
+            --field election_id=${{ inputs.election_id }}
           echo "Waiting for deployment to start..."
           sleep 10
           # Wait for the workflow to complete (timeout after 10 minutes)

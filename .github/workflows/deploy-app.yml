@@ -10,6 +10,14 @@ on:
         options:
           - qa
           - prod
+      election_id:
+        description: 'Election to build and deploy (VITE_ELECTION_ID)'
+        required: true
+        type: choice
+        default: 'peru_2026'
+        options:
+          - peru_2026
+          - peru_regional_2026
       app_branch:
         description: 'Branch of electometro-org/app to deploy'
         required: false
@@ -22,7 +30,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy to ${{ inputs.environment }}
+    name: Deploy ${{ inputs.election_id }} to ${{ inputs.environment }}
     environment: ${{ inputs.environment }}
     steps:
       - name: Checkout peru (this repo)
@@ -86,12 +94,13 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           FINGERPRINT_KEY: ${{ secrets.FINGERPRINT_KEY }}
+          VITE_ELECTION_ID: ${{ inputs.election_id }}
         run: |
           npx fpscanner build
           if [ "${{ inputs.environment }}" = "qa" ]; then
-            VITE_ELECTION_ID=peru_2026 npm run deploy-qa > /dev/null 2>&1
+            npm run deploy-qa > /dev/null 2>&1
           else
-            VITE_ELECTION_ID=peru_2026 npm run deploy
+            npm run deploy
           fi
       - name: Collect Wrangler logs
         if: always()
