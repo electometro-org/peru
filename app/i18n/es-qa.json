@@ -81,7 +81,8 @@
   },
   "elections": {
     "chile_2025": "Chile: Elecciones generales 2025",
-    "peru_2026": "Perú: Elecciones generales 2026"
+    "peru_2026": "Perú: Elecciones generales 2026",
+    "peruRegional2026": "Perú: Elecciones regionales 2026"
   },
   "entityDetails": {
     "bill": "Proyecto de ley:",
@@ -1594,6 +1595,17 @@
       "t9": "Salud pública"
     }
   },
+  "regions": {
+    "title": "¿En qué región votas?",
+    "subtitle": "Las preguntas y los candidatos dependen de tu región.",
+    "continueWith": "Continuar con [region]",
+    "searchPlaceholder": "Busca tu región…",
+    "searchLabel": "Buscar región",
+    "meta": "[candidates] candidatos · [topics] temas",
+    "noResults": "No encontramos esa región.",
+    "loadError": "No pudimos cargar las regiones.",
+    "retry": "Reintentar"
+  },
   "results": {
     "activeSelection": "Estás viendo:",
     "activeSelectionCandidate": "Candidato",
@@ -1715,7 +1727,12 @@
       "description2": "Te mostraremos qué candidatos y partidos coinciden más con tus posturas.",
       "title": "Bienvenido/a al Electómetro"
     },
-    "title": "Bienvenido/a al Electómetro [DEMO]"
+    "title": "Bienvenido/a al Electómetro [DEMO]",
+    "peru_regional_2026": {
+      "description1": "Responde a una serie de afirmaciones sobre temas importantes para tu región.",
+      "description2": "Te mostraremos qué candidatos y partidos coinciden más con tus posturas.",
+      "title": "Bienvenido/a al Electómetro"
+    }
   },
   "widgets": {
     "gauge": {
