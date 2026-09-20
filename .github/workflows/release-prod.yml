@@ -19,6 +19,16 @@ on:
         options:
           - peru_2026
           - peru_regional_2026
+      app_branch:
+        description: 'Branch of electometro-org/app to deploy (empty = default branch)'
+        required: false
+        type: string
+        default: ''
+      cf_workers_branch:
+        description: 'Branch of electometro-org/cf-workers to deploy (empty = default branch)'
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -67,12 +77,16 @@ jobs:
       - name: Trigger deploy-app.yml (production mode)
         env:
           GH_TOKEN: ${{ secrets.GH_ORG_TOKEN }}
+          APP_BRANCH: ${{ inputs.app_branch }}
+          CF_WORKERS_BRANCH: ${{ inputs.cf_workers_branch }}
         run: |
           echo "Triggering app deployment to production..."
           gh workflow run deploy-app.yml \
             --repo electometro-org/peru \
             --field environment=prod \
-            --field election_id=${{ inputs.election_id }}
+            --field election_id=${{ inputs.election_id }} \
+            --field app_branch="$APP_BRANCH" \
+            --field cf_workers_branch="$CF_WORKERS_BRANCH"
           echo "Waiting for deployment to start..."
           sleep 10
           # Wait for the workflow to complete (timeout after 10 minutes)

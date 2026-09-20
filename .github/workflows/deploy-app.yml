@@ -19,7 +19,12 @@ on:
           - peru_2026
           - peru_regional_2026
       app_branch:
-        description: 'Branch of electometro-org/app to deploy'
+        description: 'Branch of electometro-org/app to deploy (empty = default branch)'
+        required: false
+        type: string
+        default: ''
+      cf_workers_branch:
+        description: 'Branch of electometro-org/cf-workers to deploy (empty = default branch)'
         required: false
         type: string
         default: ''
@@ -48,6 +53,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: electometro-org/cf-workers
+          ref: ${{ inputs.cf_workers_branch }}
           path: cf-workers
           token: '${{ secrets.GH_ORG_TOKEN }}'
 
