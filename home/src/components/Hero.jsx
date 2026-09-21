@@ -66,12 +66,12 @@ function Hero() {
           >
             <T keyName="hero.cta.learnMore">Conocer Más</T>
           </a> */}
-          <Link
+          {/* <Link
             to="/voluntariado"
             className="btn btn-volunteer"
           >
             <T keyName="hero.cta.volunteer">Voluntariado</T>
-          </Link>
+          </Link> */}
         </div>
         <div className={`hero-stats ${isReady ? 'animate' : ''}`}>
           <div className="stat">
@@ -92,7 +92,7 @@ function Hero() {
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.necessary_nr">30+</T>
+              <T keyName="hero.stats.necessary_nr">15+</T>
             </div>
             <div className="stat-label">
               <T keyName="hero.stats.necessary">Candidatos</T>
