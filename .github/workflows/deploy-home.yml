@@ -40,6 +40,12 @@ jobs:
         run: |
           echo $HOMEPAGE_ENV_FILE | base64 --decode > .env
 
+          # Non-secret per-environment settings (home/env/qa.env, home/env/prod.env): appended last,
+          # so they override the same keys from the secret. The blank line guards against a secret
+          # whose last line has no trailing newline.
+          printf '\n' >> .env
+          cat env/${{ inputs.environment }}.env >> .env
+
       - name: Replace QA placeholder in _headers and wrangler.toml
         if: inputs.environment == 'qa'
         env:
