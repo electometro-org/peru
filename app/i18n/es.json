@@ -1598,6 +1598,17 @@
       "t9": "Salud pública"
     }
   },
+  "regions": {
+    "continueWith": "Continuar con [region]",
+    "loadError": "No pudimos cargar las regiones.",
+    "meta": "[candidates] candidatos · [topics] temas",
+    "noResults": "No encontramos esa región.",
+    "retry": "Reintentar",
+    "searchLabel": "Buscar región",
+    "searchPlaceholder": "Busca tu región…",
+    "subtitle": "Las preguntas y los candidatos dependen de tu región.",
+    "title": "¿En qué región votas?"
+  },
   "results": {
     "activeSelection": "Estás viendo:",
     "activeSelectionCandidate": "Candidato",
@@ -1716,6 +1727,11 @@
     "description2": "Al final, te mostraremos qué candidatos y partidos coinciden más con tus posturas.",
     "peru_2026": {
       "description1": "Responde a una serie de afirmaciones sobre temas importantes para el país.",
+      "description2": "Te mostraremos qué candidatos y partidos coinciden más con tus posturas.",
+      "title": "Bienvenido/a al Electómetro"
+    },
+    "peru_regional_2026": {
+      "description1": "Responde a una serie de afirmaciones sobre temas importantes para tu región.",
       "description2": "Te mostraremos qué candidatos y partidos coinciden más con tus posturas.",
       "title": "Bienvenido/a al Electómetro"
     },
