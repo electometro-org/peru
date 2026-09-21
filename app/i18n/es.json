@@ -82,6 +82,8 @@
   },
   "elections": {
     "chile_2025": "Chile: Elecciones generales 2025",
+    "peru2026Short": "Elecciones Generales 2026",
+    "peruRegional2026Short": "Elecciones Regionales 2026",
     "peru_2026": "Perú: Elecciones generales 2026"
   },
   "entityDetails": {
