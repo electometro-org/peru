@@ -1,6 +1,15 @@
 # Peru
 Stack for decide.pe
 
+## Build settings
+
+- **Homepage (`home/`):** the `.env` for the build comes from the `HOMEPAGE_ENV_FILE` secret, followed by
+  the non-secret file `home/env/<environment>.env` (`qa.env` / `prod.env`), which `deploy-home.yml`
+  appends last and so overrides the same keys. Public values such as the Rybbit analytics host and site
+  id live there, so they can be changed by a commit instead of by editing the secret. The homepage
+  reports to the same Rybbit site as the app; QA analytics is off until it has its own site id.
+- **App (`app/`):** same mechanism via the `APP_ENV_FILE` secret and `app/env/<environment>.env`.
+
 ## Deploy workflows (`.github/workflows/`)
 
 | Workflow | Inputs |
