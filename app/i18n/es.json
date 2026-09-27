@@ -1685,7 +1685,7 @@
     "topicSuggestionEmailPlaceholder": " ",
     "topicSuggestionInputLabel": "Escribe tu comentario aqui abajo",
     "topicSuggestionInputPlaceholder": "Pienso que...",
-    "topicSuggestionNameError": "Minimo 3 caracteres",
+    "topicSuggestionNameError": "Minimo 5 caracteres",
     "topicSuggestionNameLabel": "Nombre",
     "topicSuggestionNamePlaceholder": " ",
     "topicSuggestionSend": "Enviar",
