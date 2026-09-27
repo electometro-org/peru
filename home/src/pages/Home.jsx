@@ -5,6 +5,7 @@ import WhoWeAre from '../components/WhoWeAre'
 import PressKit from '../components/PressKit'
 import Collaborations from '../components/Collaborations'
 import CtaSection from '../components/CtaSection'
+import SectionScrollFab from '../components/SectionScrollFab'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Collaborations />
       <PressKit />
       {/* <CtaSection /> */}
+      <SectionScrollFab />
     </>
   )
 }

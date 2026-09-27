@@ -103,7 +103,8 @@
   "nav": {
     "features": "Qué es",
     "howItWorks": "Cómo funciona",
-    "start": "Empezar"
+    "start": "Empezar",
+    "scrollHint": "Desliza para ver más"
   },
   "whoWeAre": {
     "subtitle": "Somos un equipo de ciudadanos comprometidos con la democracia y el fortalecimiento de la participación cívica. Reunimos conocimientos de distintas disciplinas para hacer que la información electoral sea más accesible y ayudarte a tomar decisiones informadas.",
