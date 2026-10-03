@@ -2698,9 +2698,9 @@
     }
   },
   "regions": {
-    "continueWith": "[región] nisqawan qatipay.",
+    "continueWith": "{region} nisqawan qatipay.",
     "loadError": "Manataqmi regionkunata cargayta atirqaykuchu.",
-    "meta": "[candidatos] candidatos · [temas] temas",
+    "meta": "{candidates} candidatos · {topics} temas",
     "noResults": "Chay regiontaqa manan tarirqaykuchu.",
     "retry": "Wakmanta kallpachakuy",
     "searchLabel": "Maskay suyu",

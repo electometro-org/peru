@@ -2698,9 +2698,9 @@
     }
   },
   "regions": {
-    "continueWith": "[región] ukampix sarantaskakiwa.",
+    "continueWith": "{region} ukampix sarantaskakiwa.",
     "loadError": "Jiwasax janiw regiones ukanakar cargañjamäkänti.",
-    "meta": "[candidatos] candidatos · [temas] temas ukanaka",
+    "meta": "{candidates} candidatos · {topics} temas ukanaka",
     "noResults": "Janiw uka suyur jikxatapkayätti.",
     "retry": "Wasitat yantʼañamawa",
     "searchLabel": "Uka suyunxa thaqhañawa",
