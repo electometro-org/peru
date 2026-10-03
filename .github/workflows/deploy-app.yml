@@ -10,8 +10,21 @@ on:
         options:
           - qa
           - prod
+      election_id:
+        description: 'Election to build and deploy (VITE_ELECTION_ID)'
+        required: true
+        type: choice
+        default: 'peru_2026'
+        options:
+          - peru_2026
+          - peru_regional_2026
       app_branch:
-        description: 'Branch of electometro-org/app to deploy'
+        description: 'Branch of electometro-org/app to deploy (empty = default branch)'
+        required: false
+        type: string
+        default: ''
+      cf_workers_branch:
+        description: 'Branch of electometro-org/cf-workers to deploy (empty = default branch)'
         required: false
         type: string
         default: ''
@@ -22,7 +35,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy to ${{ inputs.environment }}
+    name: Deploy ${{ inputs.election_id }} to ${{ inputs.environment }}
     environment: ${{ inputs.environment }}
     steps:
       - name: Checkout peru (this repo)
@@ -40,6 +53,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: electometro-org/cf-workers
+          ref: ${{ inputs.cf_workers_branch }}
           path: cf-workers
           token: '${{ secrets.GH_ORG_TOKEN }}'
 
@@ -61,6 +75,12 @@ jobs:
           # Copy wrangler config from cf-workers
           cp -r ../cf-workers/peru_2026/wrangler ./wrangler
           echo $APP_ENV_FILE | base64 --decode > .env
+
+          # Non-secret per-environment settings (app/env/qa.env, app/env/prod.env): appended last,
+          # so they override the same keys from the secret. The blank line guards against a secret
+          # whose last line has no trailing newline.
+          printf '\n' >> .env
+          cat ../app/env/${{ inputs.environment }}.env >> .env
 
       - name: Replace QA placeholder in _headers
         if: inputs.environment == 'qa'
@@ -86,12 +106,13 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           FINGERPRINT_KEY: ${{ secrets.FINGERPRINT_KEY }}
+          VITE_ELECTION_ID: ${{ inputs.election_id }}
         run: |
           npx fpscanner build
           if [ "${{ inputs.environment }}" = "qa" ]; then
-            VITE_ELECTION_ID=peru_2026 npm run deploy-qa > /dev/null 2>&1
+            npm run deploy-qa > /dev/null 2>&1
           else
-            VITE_ELECTION_ID=peru_2026 npm run deploy
+            npm run deploy
           fi
       - name: Collect Wrangler logs
         if: always()

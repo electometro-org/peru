@@ -4,6 +4,7 @@ import { TolgeeProvider } from "@tolgee/react";
 import { tolgee } from './tolgee.js'
 import App from './App.jsx'
 import LoadingScreen, { LoadingWrapper } from './components/LoadingScreen.jsx'
+import './utils/analytics.js' // self-initializes Rybbit analytics (consent-gated)
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

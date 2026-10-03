@@ -4,6 +4,12 @@ Extract i18n keys from compact JSON files in electometro-org.github.io repo
 and merge them with es-qa.json.
 
 This script is run by GitHub Actions after cloning the electometro-org.github.io repo.
+
+Regional election keys are namespaced by region (quiz.questions.<regionId>.<id>, same for topics;
+explanations.candidates.<regionId>.<candidateId>.<topicId>). This is deliberate, not cosmetic: quiz
+ids can be shared across regions (e.g. "PE1"), and candidate ids ARE reused across regions for
+different people (region r1's "c1" and region r2's "c1" are two different candidates) — a flat key
+would silently overwrite one region's text with another's.
 """
 
 import json
@@ -89,6 +95,49 @@ def generate_i18n_structure(parties_file, candidates_file):
     return i18n
 
 
+def generate_regional_i18n_structure(regions_file):
+    """Generate quiz.questions/topics + explanations.candidates keys for every region, namespaced
+    by region id. No explanations.parties here: regional candidates run without party affiliation
+    text in the votes data (only a party name, which is not translated)."""
+
+    with open(regions_file, "r", encoding="utf-8") as f:
+        regions_data = json.load(f)
+
+    i18n = {
+        "data": {
+            "version": {
+                "qaRegional": regions_data.get("version", "")
+            }
+        },
+        "quiz": {
+            "questions": {},
+            "topics": {}
+        },
+        "explanations": {
+            "candidates": {}
+        }
+    }
+
+    regions = regions_data.get("regions", {})
+    for region_id, region in regions.items():
+        topics = region.get("quiz", {})
+        i18n["quiz"]["questions"].setdefault(region_id, {})
+        i18n["quiz"]["topics"].setdefault(region_id, {})
+        for topic_id, topic_data in topics.items():
+            i18n["quiz"]["questions"][region_id][topic_id] = topic_data.get("question", "")
+            i18n["quiz"]["topics"][region_id][topic_id] = topic_data.get("topic", "")
+
+        candidates = region.get("candidates", {})
+        i18n["explanations"]["candidates"].setdefault(region_id, {})
+        for candidate_id, candidate_data in candidates.items():
+            i18n["explanations"]["candidates"][region_id].setdefault(candidate_id, {})
+            votes = candidate_data.get("votes", {})
+            for topic_id, vote_data in votes.items():
+                i18n["explanations"]["candidates"][region_id][candidate_id][topic_id] = vote_data.get("comment", "") or ""
+
+    return i18n
+
+
 def count_keys(d, count=0):
     """Count total leaf keys in nested dict."""
     for v in d.values():
@@ -106,12 +155,17 @@ def main():
     # Paths relative to script location
     # electometro-org.github.io repo is cloned to ../electometro-data (sibling to app/)
     electometro_data_dir = os.path.join(script_dir, "..", "..", "electometro-data", "json", "latest")
+    # Regional data lives in its own latest/ directory (json/regions/latest/), not alongside the
+    # presidential files in json/latest/ — confirmed against electometro-org.github.io's release.yml,
+    # which uploads from every json/*/latest/ directory separately.
+    electometro_regions_data_dir = os.path.join(script_dir, "..", "..", "electometro-data", "json", "regions", "latest")
 
     # i18n folder is at ../i18n (sibling to scripts/)
     i18n_dir = os.path.join(script_dir, "..", "i18n")
 
     parties_file = os.path.join(electometro_data_dir, "combined_votes_peru_partidos_2026_compact.json")
     candidates_file = os.path.join(electometro_data_dir, "combined_votes_peru_pres_2026_compact.json")
+    regions_file = os.path.join(electometro_regions_data_dir, "combined_votes_peru_regions_2026_compact.json")
     es_qa_file = os.path.join(i18n_dir, "es-qa.json")
 
     # Verify input files exist
@@ -130,6 +184,15 @@ def main():
     print("Generating i18n structure from compact JSON...")
     i18n_structure = generate_i18n_structure(parties_file, candidates_file)
     print(f"  -> Generated {count_keys(i18n_structure)} keys")
+
+    # Regional data is optional: don't fail the whole (presidential) pipeline if it's not published yet
+    if os.path.exists(regions_file):
+        print("Generating i18n structure from regional compact JSON...")
+        regional_structure = generate_regional_i18n_structure(regions_file)
+        print(f"  -> Generated {count_keys(regional_structure)} regional keys")
+        i18n_structure = deep_merge(i18n_structure, regional_structure)
+    else:
+        print(f"Skipping regional keys: {regions_file} not found")
 
     # Load existing es-qa.json
     print(f"Loading {es_qa_file}...")
