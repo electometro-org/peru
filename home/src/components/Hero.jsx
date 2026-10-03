@@ -100,7 +100,7 @@ function Hero() {
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.necessary_nr">30+</T>
+              <T keyName="hero.stats.necessary_nr">15+</T>
             </div>
             <div className="stat-label">
               <T keyName="hero.stats.candidates">Preguntas</T>
@@ -109,10 +109,10 @@ function Hero() {
         </div>
         <div className="hero-parties">
           <p className="hero-parties-description">
-            <T keyName="hero.parties.description">
-                Comparamos tus respuestas con las posiciones
-                públicas de estos partidos políticos:
-              </T>
+            {/*<T keyName="hero.parties.description">*/}
+            {/*    Comparamos tus respuestas con las posiciones*/}
+            {/*    públicas de estos partidos políticos:*/}
+            {/*  </T>*/}
           </p>
 
           <PartyCarousel />
