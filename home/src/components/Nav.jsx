@@ -55,7 +55,7 @@ function Nav() {
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <a href="#caracteristicas" className="nav-link" onClick={(e) => handleSectionClick(e, 'caracteristicas')}>
-              <T keyName="nav.features">Características</T>
+              <T keyName="nav.features">Qué es</T>
             </a>
           </li>
           <li className="nav-item">

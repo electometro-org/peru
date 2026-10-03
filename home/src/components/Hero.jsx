@@ -40,24 +40,23 @@ function Hero() {
         <h1 className="hero-title">
           <span className="title-discover">
             <LanguageCurtain className="lang-curtain--hero-discover">
-              <T keyName="hero.title.discover" language={cycleLanguage}>Descubre</T>
+              <T keyName="hero.title.discover" language={cycleLanguage}>Decide informado</T>
             </LanguageCurtain>
           </span>
           <br />
           <LanguageCurtain className="title-who-represents">
             <span className="title-who">
-              <T keyName="hero.title.who" language={cycleLanguage}>quién</T>
+              <T keyName="hero.title.who" language={cycleLanguage}>en</T>
             </span>{' '}
             <span className="title-represents">
-              <T keyName="hero.title.represents" language={cycleLanguage}>te representa</T>
+              <T keyName="hero.title.represents" language={cycleLanguage}>5 minutos</T>
             </span>
           </LanguageCurtain>
         </h1>
         <p className="hero-description">
           <T keyName="hero.description">
-            Descubre qué candidatos se
-            acercan más a tus ideas. El Electómetro te ayuda a
-            comparar, pero la decisión es tuya.
+            Descubre qué partidos y candidatos políticos se
+            alinean mejor con tus principios y prioridades.
           </T>
         </p>
         <div className="hero-cta">
@@ -65,7 +64,7 @@ function Hero() {
             href={import.meta.env.VITE_ELECTOMETRO_URL}
             className="btn btn-primary"
           >
-            <T keyName="hero.cta.start">Empezar el Electrometro</T>
+            <T keyName="hero.cta.start">Empezar</T>
           </a>
           {/* <a
             href="#caracteristicas"
@@ -80,13 +79,15 @@ function Hero() {
             <T keyName="hero.cta.volunteer">Voluntariado</T>
           </Link> */}
         </div>
+        {/* Key names no longer match their content (e.g. questions_nr pairs with the "Candidatos" label) —
+            keeping the existing Tolgee key names stable rather than touching qu/ay translation keys for a copy change. */}
         <div className={`hero-stats ${isReady ? 'animate' : ''}`}>
           <div className="stat">
             <div className="stat-number">
               <T keyName="hero.stats.questions_nr">5</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.necessary">Minutos</T>
+              <T keyName="hero.stats.necessary">Candidatos</T>
             </div>
           </div>
           <div className="stat">
@@ -94,15 +95,15 @@ function Hero() {
               <T keyName="hero.stats.candidates_nr">20</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.questions">Preguntas</T>
+              <T keyName="hero.stats.questions">Minutos</T>
             </div>
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.necessary_nr">15+</T>
+              <T keyName="hero.stats.necessary_nr">30+</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.candidates">Candidatos</T>
+              <T keyName="hero.stats.candidates">Preguntas</T>
             </div>
           </div>
         </div>

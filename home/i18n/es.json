@@ -57,20 +57,20 @@
     "badge": "Elecciones 2026",
     "cta": {
       "learnMore": "Conocer más",
-      "start": "Comenzar el Electómetro",
+      "start": "Empezar",
       "volunteer": "Únete como voluntario"
     },
     "stats": {
-      "candidates": "Candidatos",
-      "necessary": "Minutos",
-      "questions": "Preguntas"
+      "candidates": "Preguntas",
+      "necessary": "Candidatos",
+      "questions": "Minutos"
     },
     "title": {
       "discover": "Decide informado",
       "represents": "5 minutos",
       "who": "en"
     },
-    "description": "Descubre qué candidatos se acercan más a tus ideas. El Electómetro te ayuda a comparar, pero la decisión es tuya.",
+    "description": "Descubre qué partidos y candidatos políticos se alinean mejor con tus principios y prioridades.",
     "parties": {
       "description": "Comparamos tus respuestas con las posiciones públicas de estos partidos políticos:"
     }
