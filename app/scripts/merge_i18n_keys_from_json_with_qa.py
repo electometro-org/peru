@@ -155,13 +155,17 @@ def main():
     # Paths relative to script location
     # electometro-org.github.io repo is cloned to ../electometro-data (sibling to app/)
     electometro_data_dir = os.path.join(script_dir, "..", "..", "electometro-data", "json", "latest")
+    # Regional data lives in its own latest/ directory (json/regions/latest/), not alongside the
+    # presidential files in json/latest/ — confirmed against electometro-org.github.io's release.yml,
+    # which uploads from every json/*/latest/ directory separately.
+    electometro_regions_data_dir = os.path.join(script_dir, "..", "..", "electometro-data", "json", "regions", "latest")
 
     # i18n folder is at ../i18n (sibling to scripts/)
     i18n_dir = os.path.join(script_dir, "..", "i18n")
 
     parties_file = os.path.join(electometro_data_dir, "combined_votes_peru_partidos_2026_compact.json")
     candidates_file = os.path.join(electometro_data_dir, "combined_votes_peru_pres_2026_compact.json")
-    regions_file = os.path.join(electometro_data_dir, "combined_votes_peru_regions_2026_compact.json")
+    regions_file = os.path.join(electometro_regions_data_dir, "combined_votes_peru_regions_2026_compact.json")
     es_qa_file = os.path.join(i18n_dir, "es-qa.json")
 
     # Verify input files exist
