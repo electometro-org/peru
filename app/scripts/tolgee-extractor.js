@@ -1,11 +1,29 @@
 /**
  * Custom Tolgee extractor for quiz and explanations keys.
  * Extracts keys from:
- * - quiz.questions.*
- * - quiz.topics.*
- * - explanations.parties.*.*
- * - explanations.candidates.*.*
+ * - quiz.questions.* (national: quiz.questions.<id>; regional: quiz.questions.<regionId>.<id>)
+ * - quiz.topics.*    (same shape as quiz.questions)
+ * - explanations.parties.*.* (national: explanations.parties.<partyId>.<topicId>)
+ * - explanations.candidates.*.* (national: explanations.candidates.<candidateId>.<topicId>;
+ *   regional: explanations.candidates.<regionId>.<candidateId>.<topicId>)
+ *
+ * National and regional entries live under the same top-level keys and are told apart purely by
+ * depth: walkTextLeaves recurses until it hits a string value, so it extracts both shapes without
+ * needing to special-case "is this a region id" anywhere.
  */
+
+// Recursively walk an object, emitting one key per string leaf (dot-joined path from `prefix`)
+function walkTextLeaves(obj, prefix, keys) {
+  if (typeof obj !== 'object' || obj === null) return;
+  for (const [segment, value] of Object.entries(obj)) {
+    const path = [...prefix, segment];
+    if (typeof value === 'string') {
+      keys.push({ keyName: path.join('.'), defaultValue: value, line: 1 });
+    } else if (typeof value === 'object' && value !== null) {
+      walkTextLeaves(value, path, keys);
+    }
+  }
+}
 
 export default function extractor(code, fileName) {
   const keys = [];
@@ -30,57 +48,10 @@ export default function extractor(code, fileName) {
     return { keys, warnings };
   }
 
-  // Extract quiz.questions.* keys
-  if (data.quiz?.questions) {
-    for (const [id, value] of Object.entries(data.quiz.questions)) {
-      keys.push({
-        keyName: `quiz.questions.${id}`,
-        defaultValue: typeof value === 'string' ? value : undefined,
-        line: 1,
-      });
-    }
-  }
-
-  // Extract quiz.topics.* keys
-  if (data.quiz?.topics) {
-    for (const [id, value] of Object.entries(data.quiz.topics)) {
-      keys.push({
-        keyName: `quiz.topics.${id}`,
-        defaultValue: typeof value === 'string' ? value : undefined,
-        line: 1,
-      });
-    }
-  }
-
-  // Extract explanations.parties.*.* keys
-  if (data.explanations?.parties) {
-    for (const [partyId, topics] of Object.entries(data.explanations.parties)) {
-      if (typeof topics === 'object' && topics !== null) {
-        for (const [topicId, value] of Object.entries(topics)) {
-          keys.push({
-            keyName: `explanations.parties.${partyId}.${topicId}`,
-            defaultValue: typeof value === 'string' ? value : undefined,
-            line: 1,
-          });
-        }
-      }
-    }
-  }
-
-  // Extract explanations.candidates.*.* keys
-  if (data.explanations?.candidates) {
-    for (const [candidateId, topics] of Object.entries(data.explanations.candidates)) {
-      if (typeof topics === 'object' && topics !== null) {
-        for (const [topicId, value] of Object.entries(topics)) {
-          keys.push({
-            keyName: `explanations.candidates.${candidateId}.${topicId}`,
-            defaultValue: typeof value === 'string' ? value : undefined,
-            line: 1,
-          });
-        }
-      }
-    }
-  }
+  if (data.quiz?.questions) walkTextLeaves(data.quiz.questions, ['quiz', 'questions'], keys);
+  if (data.quiz?.topics) walkTextLeaves(data.quiz.topics, ['quiz', 'topics'], keys);
+  if (data.explanations?.parties) walkTextLeaves(data.explanations.parties, ['explanations', 'parties'], keys);
+  if (data.explanations?.candidates) walkTextLeaves(data.explanations.candidates, ['explanations', 'candidates'], keys);
 
   return { keys, warnings };
 }
