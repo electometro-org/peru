@@ -52,21 +52,11 @@
   line-height: 1;
 }
 
-.press-card-content {
-  flex: 1;
-}
-
 .press-card-name {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0;
-}
-
-.press-card-desc {
-  font-size: 1.05rem;
-  color: var(--text-gray);
-  line-height: 1.5;
 }
 
 .press-card-btn {
@@ -79,6 +69,7 @@
   color: #D91023;
   border: 1.5px solid #D91023;
   transition: all 0.2s ease;
+  margin:  0 auto;
 }
 
 .press-card-btn:hover {

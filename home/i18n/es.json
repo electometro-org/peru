@@ -10,28 +10,28 @@
   },
   "features": {
     "accessible": {
-      "description": "Funciona perfectamente en computadora, tablet o móvil. Úsalo cuando quieras y cómo quieras.",
-      "title": "Accesible desde cualquier dispositivo"
+      "description": "Puedes responder el cuestionario desde tu computadora, tablet o celular, estés donde estés.",
+      "title": "Accesibilidad"
     },
     "fast": {
-      "description": "Completa el cuestionario en menos de 5 minutos y obtén resultados instantáneos. ¡Listo!",
-      "title": "Rápido y fácil"
+      "description": "Completa el cuestionario en aproximadamente 5 minutos y conoce tus resultados al instante.",
+      "title": "Rápido y sencillo"
     },
     "matching": {
-      "description": "Nuestro algoritmo compara tus respuestas con los planes de gobierno, declaraciones y entrevistas de las candidaturas y sus partidos políticos.",
-      "title": "Así funciona "
+      "description": "Comparamos tus respuestas con las declaraciones públicas de las candidaturas y sus partidos políticos.",
+      "title": "Así funciona"
     },
     "objective": {
       "description": "Metodología transparente basada en propuestas y posiciones públicas de los partidos.",
-      "title": "Transparencia y objetividad"
+      "title": "Transparencia"
     },
     "privacy": {
-      "description": "No guardamos tus datos personales. Tampoco compartimos información con partidos políticos o privados.",
-      "title": "Protegemos tus datos"
+      "description": "No guardamos tus datos personales ni compartimos tus respuestas con partidos políticos o terceros.",
+      "title": "Protección de datos"
     },
     "results": {
       "description": "Visualiza tu afinidad con cada partido y compara tus respuestas con sus posiciones individuales y/o partidarias.",
-      "title": "Resultados detallados"
+      "title": "Resultados"
     },
     "subtitle": "Una herramienta confiable y transparente para tomar decisiones informadas. No te decimos por quién votar: te ayudamos a ordenar tus prioridades y ver quiénes las representan.",
     "title": "¿Qué es el Electómetro?"
@@ -57,7 +57,8 @@
     "badge": "Elecciones 2026",
     "cta": {
       "learnMore": "Conocer más",
-      "start": "Empezar"
+      "start": "Empezar",
+      "volunteer": "Únete como voluntario"
     },
     "stats": {
       "candidates": "Preguntas",
@@ -68,6 +69,10 @@
       "discover": "Decide informado",
       "represents": "5 minutos",
       "who": "en"
+    },
+    "description": "Descubre qué partidos y candidatos políticos se alinean mejor con tus principios y prioridades.",
+    "parties": {
+      "description": "Comparamos tus respuestas con las posiciones públicas de estos partidos políticos:"
     }
   },
   "howItWorks": {
@@ -77,19 +82,19 @@
       "title": "¿Listo para empezar?"
     },
     "step1": {
-      "description": "Indica si estás a favor, neutral o en contra de diferentes tesis políticas. Sáltalas si no estás seguro.",
+      "description": "Indica si estás a favor, neutral o en contra de diferentes tesis políticas.",
       "title": "Responde las preguntas"
     },
     "step2": {
-      "description": "Nuestro algoritmo compara tus respuestas con las posiciones de todas las candidaturas.",
+      "description": "El Electómetro compara tus respuestas con las posiciones de todas las candidaturas.",
       "title": "Analiza tu perfil"
     },
     "step3": {
-      "description": "Visualiza qué partidos y candidatos/as se alinean mejor con tus ideas y conoce las diferencias clave.",
+      "description": "Visualiza qué partidos y candidatos/as se alinean mejor con tus ideas.",
       "title": "Descubre tu compatibilidad"
     },
     "step4": {
-      "description": "Usa esta información como guía para tomar una decisión electoral más consciente y fundamentada.",
+      "description": "Usa esta información como guía para tomar una decisión electoral más consciente.",
       "title": "Decide informado"
     },
     "subtitle": "En solo 5 pasos, encuentra el partido y candidato que mejor representa tus valores",
@@ -98,6 +103,11 @@
   "nav": {
     "features": "Qué es",
     "howItWorks": "Cómo funciona",
-    "start": "Empezar"
+    "start": "Empezar",
+    "scrollHint": "Desliza para ver más"
+  },
+  "whoWeAre": {
+    "subtitle": "Somos un equipo de ciudadanos y ciudadanas comprometidos con la democracia y el voto informado. Unimos fuerzas para desarrollar decide.pe y hacer más sencillo tu ejercicio democrático.",
+    "title": "¿Quiénes somos?"
   }
 }
