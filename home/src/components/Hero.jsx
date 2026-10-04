@@ -79,31 +79,29 @@ function Hero() {
             <T keyName="hero.cta.volunteer">Voluntariado</T>
           </Link> */}
         </div>
-        {/* Key names no longer match their content (e.g. questions_nr pairs with the "Candidatos" label) —
-            keeping the existing Tolgee key names stable rather than touching qu/ay translation keys for a copy change. */}
         <div className={`hero-stats ${isReady ? 'animate' : ''}`}>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.questions_nr">5</T>
+              <T keyName="hero.stats.necessary_nr">5</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.necessary">Candidatos</T>
+              <T keyName="hero.stats.necessary">Minutos</T>
             </div>
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.candidates_nr">20</T>
+              <T keyName="hero.stats.questions_nr">20</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.questions">Minutos</T>
+              <T keyName="hero.stats.questions">Preguntas</T>
             </div>
           </div>
           <div className="stat">
             <div className="stat-number">
-              <T keyName="hero.stats.necessary_nr">15+</T>
+              <T keyName="hero.stats.candidates_nr">15+</T>
             </div>
             <div className="stat-label">
-              <T keyName="hero.stats.candidates">Preguntas</T>
+              <T keyName="hero.stats.candidates">Candidatos</T>
             </div>
           </div>
         </div>

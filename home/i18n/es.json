@@ -65,12 +65,12 @@
       "volunteer": "Únete como voluntario"
     },
     "stats": {
-      "candidates": "Preguntas",
-      "necessary": "Candidatos",
-      "questions": "Minutos",
-      "questions_nr": "5",
-      "candidates_nr": "20",
-      "necessary_nr": "15+"
+      "candidates": "Candidatos",
+      "necessary": "Minutos",
+      "questions": "Preguntas",
+      "questions_nr": "20",
+      "candidates_nr": "15+",
+      "necessary_nr": "5"
     },
     "title": {
       "discover": "Decide informado",
