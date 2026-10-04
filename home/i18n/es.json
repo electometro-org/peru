@@ -67,7 +67,10 @@
     "stats": {
       "candidates": "Preguntas",
       "necessary": "Candidatos",
-      "questions": "Minutos"
+      "questions": "Minutos",
+      "questions_nr": "5",
+      "candidates_nr": "20",
+      "necessary_nr": "15+"
     },
     "title": {
       "discover": "Decide informado",
@@ -114,7 +117,63 @@
   },
   "whoWeAre": {
     "subtitle": "Somos un equipo de ciudadanos y ciudadanas comprometidos con la democracia y el voto informado. Unimos fuerzas para desarrollar decide.pe y hacer más sencillo tu ejercicio democrático.",
-    "title": "¿Quiénes somos?"
+    "title": "¿Quiénes somos?",
+    "member1": {
+      "name": "Esteban Lazo",
+      "role": "Director del proyecto (elazo@decide.pe)"
+    },
+    "member2": {
+      "name": "José Valqui",
+      "role": "Responsable de investigación (jvalqui@decide.pe)"
+    },
+    "member3": {
+      "name": "Nicolás León",
+      "role": "Responsable de comunicaciones (nleon@decide.pe)"
+    },
+    "member4": {
+      "name": "Sebastián Fernández",
+      "role": "Responsable de redes sociales"
+    },
+    "member5": {
+      "name": "Luka Haberle",
+      "role": "Investigador principal"
+    },
+    "member6": {
+      "name": "Ariana Sasieta",
+      "role": "Responsable de alianzas y comunicación institucional"
+    },
+    "member7": {
+      "name": "Sophia Gaitán",
+      "role": "Responsable de alianzas e imagen pública"
+    },
+    "member8": {
+      "name": "Fernando Saba",
+      "role": "Responsable de infraestructura web (fsaba@decide.pe)"
+    },
+    "member9": {
+      "name": "Gabriel Ríos",
+      "role": "Desarrollador UX/UI y creador de contenido en redes sociales"
+    },
+    "member10": {
+      "name": "Ignacio Sar Chávez",
+      "role": "Asesor de métodos"
+    },
+    "member11": {
+      "name": "Daniel Abanto",
+      "role": "Analista de datos"
+    },
+    "member12": {
+      "name": "Ernesto Acosta",
+      "role": "Responsable de dirección creativa"
+    },
+    "member13": {
+      "name": "Mariana Gálvez",
+      "role": "Imagen pública"
+    },
+    "member14": {
+      "name": "Ángel Cereceda",
+      "role": "Creador de contenido en redes sociales e imagen pública"
+    }
   },
   "collaborations": {
     "title": "Alianzas",
