@@ -41,7 +41,10 @@
       "features": "Qué es",
       "howItWorks": "Cómo Funciona",
       "startTest": "Empezar Test",
-      "title": "Acerca de"
+      "title": "Acerca de",
+      "whoWeAre": "Quiénes somos",
+      "collaborations": "Alianzas",
+      "pressKit": "Kit de prensa"
     },
     "description": "Herramienta imparcial para descubrir qué partido político representa mejor tus ideas y valores.",
     "disclaimer": "Herramienta informativa. No constituye consejo electoral oficial.",
@@ -50,7 +53,8 @@
       "contact": "Contacto",
       "methodology": "Metodología",
       "privacy": "Política de Privacidad",
-      "title": "Información"
+      "title": "Información",
+      "volunteer": "Voluntariado"
     }
   },
   "hero": {
@@ -104,10 +108,45 @@
     "features": "Qué es",
     "howItWorks": "Cómo funciona",
     "start": "Empezar",
-    "scrollHint": "Desliza para ver más"
+    "scrollHint": "Desliza para ver más",
+    "methodology": "Metodología",
+    "whoWeAre": "Quiénes somos"
   },
   "whoWeAre": {
     "subtitle": "Somos un equipo de ciudadanos y ciudadanas comprometidos con la democracia y el voto informado. Unimos fuerzas para desarrollar decide.pe y hacer más sencillo tu ejercicio democrático.",
     "title": "¿Quiénes somos?"
+  },
+  "collaborations": {
+    "title": "Alianzas",
+    "subtitle": "Siempre estamos en busca de nuevas colaboraciones. Actualmente trabajamos junto a:",
+    "type1": {
+      "title": "capictive.app",
+      "desc": "Investiga a detalle"
+    },
+    "type2": {
+      "title": "capibarismo.com",
+      "desc": "¡A luchar!"
+    }
+  },
+  "pressKit": {
+    "title": "Kit de Prensa",
+    "download": "Descargar",
+    "contactLabel": "¿Quieres compartirnos tu material?",
+    "resource2": {
+      "name": "Presentación oficial"
+    },
+    "resource3": {
+      "name": "Spots de radio"
+    },
+    "resource4": {
+      "name": "Spots de TV y redes"
+    }
+  },
+  "volunteering": {
+    "title": "Convocatoria de voluntarios/as",
+    "text": "Somos una iniciativa ciudadana, apartidaria y sin fines de lucro que busca ayudar a los/as peruanos/as a votar de manera más informada. Para lograrlo,",
+    "cta": "¡te necesitamos!",
+    "text2": "Estamos buscando escolares (de secundaria), estudiantes universitarios y profesionales con interés en la política que quieran ayudarnos a monitorear declaraciones, propuestas y posiciones de candidatos/as regionales y municipales. No necesitas experiencia previa: solo compromiso con la objetividad y ganas de aportar. Nosotros te capacitaremos y acompañaremos en el proceso.",
+    "button": "¡Quiero inscribirme!"
   }
 }
